@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package CONTROLADOR;
-
+// algo
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
