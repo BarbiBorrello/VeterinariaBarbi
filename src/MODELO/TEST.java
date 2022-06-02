@@ -86,6 +86,9 @@ public class TEST {
 //cd.buscarClientexAPELLIDO("Martinez");
 //no corre
 
+// Prueba:  MASCOTA DATA //------------------------------------------------------------------- 
+// METODO: AGREGAR MASCOTA //-----------------------------------------------------------------
+
 //Mascota mascota1 = new Mascota("Pedro", "macho", "perro", "golden", "dorado", LocalDate.of(2020,4, 29), 40, 50.5, true,cd.buscarCliente(4));
 //md.agregar_Mascota(mascota1);
 ////
@@ -113,6 +116,15 @@ public class TEST {
 //Mascota mascota9 = new Mascota("Barbi", "hembra", "gato", "tricolor", "tricolor/ BNG", LocalDate.of(2017,3, 12), 7, 7.5, true, cd.buscarCliente(34));
 //md.agregar_Mascota(mascota9);
 //// NO SE PUEDA CARGAR CLIENTE INEXISTENTE//
+
+// Prueba:  TRATAMIENTO DATA //------------------------------------------------------------------- 
+// METODO: AGREGAR TRATAMENTO //-----------------------------------------------------------------
+
+//Visita visita1 = new Visita(LocalDate.of(2020,4, 29),28.7,true,md.buscarMascotaActiva(5),td.buscarTratamientoActivo(1));
+//vd.agregarVisita(visita1);
+
+Tratamiento tratamiento1 = new Tratamiento ("Vacunacion"," se aplica una dosis","antirrabica",1900,true,vd.buscarVisita(1));
+td.agregar_Tratamiento(tratamiento1);
             
 
 
