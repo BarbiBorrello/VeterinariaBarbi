@@ -129,8 +129,44 @@ public class TEST {
 //Tratamiento tratamiento2 = new Tratamiento ("Vacunacion"," se aplica una dosis","quintuple",1800,true);
 //td.agregar_Tratamiento(tratamiento2);
 
-//Tratamiento tratamiento2 = new Tratamiento ("Vacunacion"," se aplica una dosis","quintuple",1800,true);
-//td.agregar_Tratamiento(tratamiento2);
+//
+//Tratamiento tratamiento3 = new Tratamiento ("Enfermedad"," hongos en las orejas","gotas Otovier NF",590,true);
+//td.agregar_Tratamiento(tratamiento3);
+
+//Tratamiento tratamiento4 = new Tratamiento ("Curaciones","ataque de jabali","antibiticos / analgesicos ",3500,true);
+//td.agregar_Tratamiento(tratamiento4);
+//
+//Tratamiento tratamiento5 = new Tratamiento ("Estetica","Baño y Corte de Pelo"," ",1500,true);
+//td.agregar_Tratamiento(tratamiento5);
+
+//Tratamiento tratamiento6 = new Tratamiento ("Castracion","tamaño medio: se retiran solo ovarios"," material quirurjico y analgesicos ",6700,true);
+//td.agregar_Tratamiento(tratamiento6);
+//
+//Tratamiento tratamiento7 = new Tratamiento ("Desparacitacion","1 sola toma, cada 6 meses en adultos"," triplex comprimidos ",170,true);
+//td.agregar_Tratamiento(tratamiento7);
+
+// Prueba: VISITA DATA //------------------------------------------------------------------- 
+// METODO: AGREGAR VISITA //-----------------------------------------------------------------
+            
+//Visita visita1 = new Visita(LocalDate.of(2020,4, 29),5.7,true,md.buscarMascotaActiva(5),td.buscarTratamientoActivo(1));
+//vd.agregarVisita(visita1);
+
+//Visita visita2 = new Visita(LocalDate.of(2022,8, 13),29.8,true,md.buscarMascotaActiva(5),td.buscarTratamientoActivo(5));
+//vd.agregarVisita(visita2);
+
+//Visita visita3 = new Visita(LocalDate.of(2020,4, 30),32.8,true,md.buscarMascotaActiva(6),td.buscarTratamientoActivo(1));
+//vd.agregarVisita(visita3);
+
+//Visita visita4 = new Visita(LocalDate.of(2019,9, 12),15.7,true,md.buscarMascotaActiva(3),td.buscarTratamientoActivo(3));
+//vd.agregarVisita(visita4);
+//
+//Visita visita5 = new Visita(LocalDate.of(2012,9, 01),3.7,true,md.buscarMascotaActiva(1),td.buscarTratamientoActivo(6));
+//vd.agregarVisita(visita5);
+
+Visita visita6 = new Visita(LocalDate.of(2012,9, 01),3.7,true,md.buscarMascotaActiva(1),td.buscarTratamientoActivo(2));
+vd.agregarVisita(visita6);
+
+
 
 
             
