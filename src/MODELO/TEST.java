@@ -123,8 +123,16 @@ public class TEST {
 //Visita visita1 = new Visita(LocalDate.of(2020,4, 29),28.7,true,md.buscarMascotaActiva(5),td.buscarTratamientoActivo(1));
 //vd.agregarVisita(visita1);
 
-Tratamiento tratamiento1 = new Tratamiento ("Vacunacion"," se aplica una dosis","antirrabica",1900,true,vd.buscarVisita(1));
-td.agregar_Tratamiento(tratamiento1);
+//Tratamiento tratamiento1 = new Tratamiento ("Vacunacion"," se aplica una dosis","antirrabica",1900,true);
+//td.agregar_Tratamiento(tratamiento1);
+//
+//Tratamiento tratamiento2 = new Tratamiento ("Vacunacion"," se aplica una dosis","quintuple",1800,true);
+//td.agregar_Tratamiento(tratamiento2);
+
+//Tratamiento tratamiento2 = new Tratamiento ("Vacunacion"," se aplica una dosis","quintuple",1800,true);
+//td.agregar_Tratamiento(tratamiento2);
+
+
             
 
 
