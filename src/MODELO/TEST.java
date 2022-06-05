@@ -165,8 +165,13 @@ public class TEST {
 //
 //Visita visita6 = new Visita(LocalDate.of(2012,9, 01),3.7,true,md.buscarMascotaActiva(1),td.buscarTratamientoActivo(2));
 //vd.agregarVisita(visita6);
+//
+//md.buscarMascotaInactiva(1);
+//md.buscarMascotaActiva(2);
 
+md.buscarMascotaxALIAS("Tincho");
 
+        
 
 
             

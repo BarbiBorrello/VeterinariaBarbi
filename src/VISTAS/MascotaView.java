@@ -27,21 +27,235 @@ public class MascotaView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
-        );
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+
+        getContentPane().setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel1.setText("Ultima Visita");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 290, 171, 20);
+
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel3.setText("Mascota");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(20, 40, 70, 30);
+
+        jLabel2.setText("Raza");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 180, 70, 20);
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(100, 210, 90, 20);
+
+        jLabel4.setText("Sexo");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 210, 70, 20);
+
+        jTextField2.setText("jTextField1");
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(350, 210, 90, 20);
+
+        jLabel5.setText("Alias:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(30, 120, 70, 20);
+
+        jTextField3.setText("jTextField1");
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(100, 120, 90, 20);
+
+        jLabel6.setText("Especie: ");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(30, 150, 70, 20);
+
+        jTextField4.setText("jTextField1");
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(100, 150, 90, 20);
+
+        jLabel7.setText("Peso Promedio :");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(240, 210, 100, 20);
+
+        jTextField5.setText("jTextField1");
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(100, 180, 90, 20);
+
+        jLabel8.setText("Paciente N°:");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(20, 90, 70, 20);
+
+        jTextField6.setText("jTextField1");
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(100, 90, 90, 20);
+
+        jLabel9.setText("Fecha de Nacimiento:");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(240, 90, 120, 20);
+
+        jTextField7.setText("jTextField1");
+        getContentPane().add(jTextField7);
+        jTextField7.setBounds(350, 90, 90, 20);
+
+        jLabel10.setText("Edad:");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(240, 120, 70, 20);
+
+        jTextField8.setText("jTextField1");
+        getContentPane().add(jTextField8);
+        jTextField8.setBounds(350, 120, 90, 20);
+
+        jLabel11.setText("Color de pelaje:");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(240, 150, 100, 20);
+
+        jTextField9.setText("jTextField1");
+        getContentPane().add(jTextField9);
+        jTextField9.setBounds(350, 150, 90, 20);
+
+        jLabel12.setText("Peso Actual:");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(240, 180, 100, 20);
+
+        jTextField10.setText("jTextField1");
+        getContentPane().add(jTextField10);
+        jTextField10.setBounds(350, 180, 90, 20);
+
+        jRadioButton1.setText("Fallecido");
+        getContentPane().add(jRadioButton1);
+        jRadioButton1.setBounds(90, 250, 93, 23);
+
+        jRadioButton2.setText("Vacunado");
+        getContentPane().add(jRadioButton2);
+        jRadioButton2.setBounds(240, 250, 73, 23);
+
+        jRadioButton3.setText("Castrado");
+        getContentPane().add(jRadioButton3);
+        jRadioButton3.setBounds(380, 250, 69, 23);
+
+        jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel13.setText("Datos Basicos");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(10, 0, 171, 20);
+
+        jLabel14.setText("FOTO");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(470, 90, 110, 140);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 322, 570, 240);
+
+        jButton1.setText("Salir");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(480, 20, 80, 23);
+
+        jButton2.setText("Guardar");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(280, 10, 71, 23);
+
+        jButton3.setText("Actualizar");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(370, 10, 80, 23);
+
+        jButton4.setText("Buscar");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(280, 40, 70, 23);
+
+        jButton5.setText("Borrar");
+        getContentPane().add(jButton5);
+        jButton5.setBounds(370, 40, 80, 23);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(200, 290, 280, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
