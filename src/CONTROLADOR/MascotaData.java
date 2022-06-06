@@ -218,12 +218,11 @@ public class MascotaData {
 
         Mascota mascota = null;
 
-        String sql = "SELECT * FROM  mascota  WHERE  activo =1 AND  alias LIKE \"%?%\";";
+        String sql = "SELECT * FROM  mascota  WHERE  activo =1 AND  alias LIKE ? ";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            
-           
+
             ps.setString(1, p_alias);
 
             ResultSet rs = ps.executeQuery();
@@ -245,10 +244,11 @@ public class MascotaData {
                     mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
                     mascota.setActivo(rs.getBoolean("activo"));
 
+                    JOptionPane.showMessageDialog(null, "Mascota encontrada exitosamente  " + " Paciente n° : " + mascota.getId_mascota());
                 }
 
             } else {
-                JOptionPane.showMessageDialog(null, "Mascota inexistente");
+                JOptionPane.showMessageDialog(null, "Paciente inexistente");
             }
             ps.close();
 
@@ -257,8 +257,6 @@ public class MascotaData {
         }
         return mascota;
     }
-    
-
 
     public void modificarMascota(int p_id_mascota, Mascota p_mascota) {
 
@@ -381,17 +379,61 @@ public class MascotaData {
 
         return mascotas;
     }
+    
+  // retorna el peso de la ultima visita //
+    
+    public double pesoActual(int p_id_mascota) {
 
-    public void pesoActual(int p_id_mascota) {
+        double peso_actual = 0;
 
-        double peso_actual;
+        try {
+            String sql = "SELECT peso FROM visita WHERE id_mascota=? ORDER BY fecha_visita DESC LIMIT 1;";
 
-//           peso_actual=vd.buscarVisita(p_id_mascota).getPeso();
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, p_id_mascota);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                peso_actual = rs.getDouble("peso");
+            }
+
+            ps.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener los alumnos: " + ex.getMessage());
+        }
+
+        return peso_actual;
     }
 
-    public double pesoPromedio(int p_peso_actual) {
-//            
-//            double promedio = 0;
-        return 0;
+
+ // calcula el peso promedio de las ultimas 10 visitas por fecha//
+    
+    public double pesoPromedio(int p_id_mascota) {
+
+        double promedio = 0;
+        double suma = 0;
+        int contador = 0;
+
+        try {
+            String sql = "SELECT peso FROM visita WHERE id_mascota=? ORDER BY fecha_visita DESC LIMIT 10;";
+
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, p_id_mascota);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                suma += rs.getDouble("peso");
+                contador++;
+            }
+            promedio = suma / contador;
+            ps.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener los alumnos: " + ex.getMessage());
+        }
+
+        return promedio;
     }
+    
+  
 }

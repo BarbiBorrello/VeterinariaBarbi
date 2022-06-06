@@ -170,6 +170,7 @@ public class TEST {
 //md.buscarMascotaActiva(2);
 
 md.buscarMascotaxALIAS("Tincho");
+md.buscarMascotaxALIAS("Lola");
 
         
 

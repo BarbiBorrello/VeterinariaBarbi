@@ -9,12 +9,12 @@ package VISTAS;
  *
  * @author Barbara
  */
-public class MascotaView extends javax.swing.JInternalFrame {
+public class TratamientoView extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form MascotaView
      */
-    public MascotaView() {
+    public TratamientoView() {
         initComponents();
     }
 
@@ -27,33 +27,20 @@ public class MascotaView extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -66,70 +53,49 @@ public class MascotaView extends javax.swing.JInternalFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 12)); // NOI18N
-        jLabel1.setText("Datos del Dueño");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 400, 171, 20);
-
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel3.setText("Mascota");
+        jLabel3.setText("Tratamientos");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 40, 100, 30);
+        jLabel3.setBounds(20, 40, 140, 30);
 
-        jLabel2.setText("Raza");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 180, 70, 20);
-
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(100, 210, 90, 20);
-
-        jLabel4.setText("Sexo");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 210, 70, 20);
-
-        jTextField2.setText("jTextField1");
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(350, 210, 90, 20);
-
-        jLabel5.setText("Alias:");
+        jLabel5.setText("Tipo ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 120, 70, 20);
+        jLabel5.setBounds(10, 120, 70, 20);
 
         jTextField3.setText("jTextField1");
         getContentPane().add(jTextField3);
         jTextField3.setBounds(100, 120, 90, 20);
 
-        jLabel6.setText("Especie: ");
+        jLabel6.setText("Precio");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 150, 70, 20);
+        jLabel6.setBounds(10, 150, 70, 20);
 
         jTextField4.setText("jTextField1");
         getContentPane().add(jTextField4);
         jTextField4.setBounds(100, 150, 90, 20);
 
-        jLabel7.setText("Peso Promedio :");
+        jLabel7.setText("Medicamentos");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(240, 210, 100, 20);
+        jLabel7.setBounds(240, 150, 100, 20);
 
-        jTextField5.setText("jTextField1");
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(100, 180, 90, 20);
-
-        jLabel8.setText("Paciente N°:");
+        jLabel8.setText("Tratamiento  N°:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(20, 90, 70, 20);
+        jLabel8.setBounds(10, 90, 90, 20);
 
         jTextField6.setText("jTextField1");
         getContentPane().add(jTextField6);
         jTextField6.setBounds(100, 90, 90, 20);
 
-        jLabel9.setText("Fecha de Nacimiento:");
+        jLabel9.setText("Descripcion");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(240, 90, 120, 20);
 
@@ -137,50 +103,22 @@ public class MascotaView extends javax.swing.JInternalFrame {
         getContentPane().add(jTextField7);
         jTextField7.setBounds(350, 90, 90, 20);
 
-        jLabel10.setText("Edad:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(240, 120, 70, 20);
-
-        jTextField8.setText("jTextField1");
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(350, 120, 90, 20);
-
-        jLabel11.setText("Color de pelaje:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(240, 150, 100, 20);
-
         jTextField9.setText("jTextField1");
         getContentPane().add(jTextField9);
         jTextField9.setBounds(350, 150, 90, 20);
 
-        jLabel12.setText("Peso Actual:");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(240, 180, 100, 20);
-
-        jTextField10.setText("jTextField1");
-        getContentPane().add(jTextField10);
-        jTextField10.setBounds(350, 180, 90, 20);
-
-        jRadioButton1.setText("Fallecido");
+        jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(60, 250, 93, 23);
+        jRadioButton1.setBounds(190, 210, 93, 23);
 
-        jRadioButton2.setText("Vacunado");
+        jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(210, 250, 73, 23);
-
-        jRadioButton3.setText("Castrado");
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(350, 250, 69, 23);
+        jRadioButton2.setBounds(340, 210, 73, 23);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(10, 0, 171, 20);
-
-        jLabel14.setText("FOTO");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(470, 90, 110, 140);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -196,40 +134,40 @@ public class MascotaView extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 430, 570, 60);
+        jScrollPane1.setBounds(20, 540, 570, 60);
 
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(480, 20, 80, 23);
+        jButton1.setBounds(490, 10, 80, 23);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(280, 10, 71, 23);
+        jButton2.setBounds(270, 0, 71, 23);
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(370, 10, 80, 23);
+        jButton3.setBounds(360, 0, 80, 23);
 
         jButton4.setText("Buscar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(280, 40, 70, 23);
+        jButton4.setBounds(270, 30, 70, 23);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(370, 40, 80, 23);
+        jButton5.setBounds(360, 30, 80, 23);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(210, 400, 280, 20);
+        jComboBox1.setBounds(270, 500, 280, 20);
 
         jLabel15.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
-        jLabel15.setText("Ultima Visita");
+        jLabel15.setText("Listado : precios");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(20, 290, 171, 20);
+        jLabel15.setBounds(10, 500, 230, 20);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(200, 290, 280, 20);
+        jComboBox2.setBounds(270, 260, 280, 20);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -245,11 +183,37 @@ public class MascotaView extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jTable2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 320, 570, 60);
+        jScrollPane2.setBounds(10, 300, 570, 60);
 
-        jRadioButton4.setText("Desparacitado");
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(470, 250, 95, 23);
+        jLabel16.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel16.setText("Listado : tratamientos");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(20, 260, 210, 20);
+
+        jLabel17.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel17.setText("Listado : medicamentos");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(10, 380, 230, 20);
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox3);
+        jComboBox3.setBounds(270, 380, 280, 20);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(20, 420, 570, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -263,16 +227,12 @@ public class MascotaView extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -280,21 +240,16 @@ public class MascotaView extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
