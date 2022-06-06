@@ -4,10 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/MODELO/TEST.java</file>
+            <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/MODELO/Tratamiento.java</file>
+            <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/MODELO/Veterianaria_Test_Main_F.java</file>
             <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/VISTAS/Main.java</file>
             <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/CONTROLADOR/MascotaData.java</file>
             <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/MODELO/Mascota.java</file>
-            <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/VISTAS/MascotaView.java</file>
+            <file>file:/C:/Users/Barbara/Documents/NetBeansProjects/Veterianaria_BARBI/src/VISTAS/TratamientoView.java</file>
         </group>
     </open-files>
 </project-private>
