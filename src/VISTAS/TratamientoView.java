@@ -36,7 +36,6 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -58,6 +57,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jComboBox3 = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
+        jTextField10 = new javax.swing.JTextField();
 
         getContentPane().setLayout(null);
 
@@ -69,23 +69,23 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jLabel5.setText("Tipo ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 120, 70, 20);
+        jLabel5.setBounds(270, 90, 70, 20);
 
         jTextField3.setText("jTextField1");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(100, 120, 90, 20);
+        jTextField3.setBounds(350, 90, 90, 20);
 
         jLabel6.setText("Precio");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 150, 70, 20);
+        jLabel6.setBounds(20, 180, 70, 20);
 
         jTextField4.setText("jTextField1");
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(100, 150, 90, 20);
+        jTextField4.setBounds(100, 180, 90, 20);
 
         jLabel7.setText("Medicamentos");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(240, 150, 100, 20);
+        jLabel7.setBounds(10, 150, 80, 20);
 
         jLabel8.setText("Tratamiento  N°:");
         getContentPane().add(jLabel8);
@@ -97,23 +97,24 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jLabel9.setText("Descripcion");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(240, 90, 120, 20);
+        jLabel9.setBounds(10, 120, 120, 20);
 
-        jTextField7.setText("jTextField1");
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(350, 90, 90, 20);
-
-        jTextField9.setText("jTextField1");
+        jTextField9.setText("texto descripcion");
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(350, 150, 90, 20);
+        jTextField9.setBounds(100, 120, 430, 20);
 
         jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(190, 210, 93, 23);
+        jRadioButton1.setBounds(190, 220, 93, 23);
 
         jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(340, 210, 73, 23);
+        jRadioButton2.setBounds(300, 220, 73, 23);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
@@ -215,8 +216,16 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(20, 420, 570, 60);
 
+        jTextField10.setText("texto medicamentos");
+        getContentPane().add(jTextField10);
+        jTextField10.setBounds(100, 150, 430, 20);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -246,10 +255,10 @@ public class TratamientoView extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
