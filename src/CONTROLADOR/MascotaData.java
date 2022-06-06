@@ -366,7 +366,7 @@ public class MascotaData {
                 mascota.setColor_pelaje(rs.getString("color_pelaje"));
                 mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
                 mascota.setPeso_actual(rs.getDouble("peso_actual"));
-                mascota.setCliente(cd.buscarCliente(rs.getInt("id_cliente")));
+//              mascota.setCliente(rs.getObject(cd.getClass().
                 mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
                 mascota.setActivo(rs.getBoolean("activo"));
 
@@ -379,9 +379,8 @@ public class MascotaData {
 
         return mascotas;
     }
-    
-  // retorna el peso de la ultima visita //
-    
+
+    // retorna el peso de la ultima visita //
     public double pesoActual(int p_id_mascota) {
 
         double peso_actual = 0;
@@ -405,9 +404,7 @@ public class MascotaData {
         return peso_actual;
     }
 
-
- // calcula el peso promedio de las ultimas 10 visitas por fecha//
-    
+    // calcula el peso promedio de las ultimas 10 visitas por fecha//
     public double pesoPromedio(int p_id_mascota) {
 
         double promedio = 0;
@@ -434,6 +431,48 @@ public class MascotaData {
 
         return promedio;
     }
-    
+ 
+  public List<Mascota> obtenerEspecies(String p_especie){
+        
+      ArrayList<Mascota> especies = new ArrayList<Mascota>();
+
+        try {
+            String sql = "SELECT * FROM mascota WERE especie LIKE ?";
+          
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();
+
+            Mascota mascota;
+//          cd = new ClienteData(con);
+            while (rs.next()) {
+
+                mascota = new Mascota();
+               
+                
+                mascota.setId_mascota(rs.getInt("id_mascota"));
+                mascota.setAlias(rs.getString("alias"));
+                mascota.setSexo(rs.getString("sexo"));
+                mascota.setEspecie(rs.getString("especie"));
+                mascota.setRaza(rs.getString("raza"));
+                mascota.setColor_pelaje(rs.getString("color_pelaje"));
+                mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
+                mascota.setPeso_actual(rs.getDouble("peso_actual"));
+//              mascota.setCliente(rs.getObject(cd.getClass().
+                mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
+                mascota.setActivo(rs.getBoolean("activo"));
+                
+                Mascota especie = null;
+
+                especies.add(especie);
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener listado de especies: " + ex.getMessage());
+        }
+
+        return especies;
+    }
   
+    
 }

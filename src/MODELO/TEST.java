@@ -15,6 +15,7 @@ import CONTROLADOR.Conexion;
 import CONTROLADOR.MascotaData;
 import CONTROLADOR.TratamientoData;
 import CONTROLADOR.VisitaData;
+import java.util.List;
 
 /**
  *
@@ -169,8 +170,30 @@ public class TEST {
 //md.buscarMascotaInactiva(1);
 //md.buscarMascotaActiva(2);
 
-md.buscarMascotaxALIAS("Tincho");
-md.buscarMascotaxALIAS("Lola");
+//md.buscarMascotaxALIAS("Tincho");
+//md.buscarMascotaxALIAS("Lola");
+//
+//md.buscarMascotas(1);
+
+//List <Mascota> mascotas = md.obtenerMascotas();
+//
+//for (Mascota m : mascotas){
+//    System.out.println(m.getAlias());
+//    System.out.println(m.getId_mascota());
+//    System.out.println(m.getCliente());
+//}
+
+List <Mascota> especies = md.obtenerEspecies("Perro");
+
+for (Mascota m : especies){
+    System.out.println(m.getAlias());
+
+    System.out.println(m.getId_mascota());
+//    System.out.println(m.getCliente());
+}
+
+
+
 
         
 
