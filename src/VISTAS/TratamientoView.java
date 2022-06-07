@@ -58,6 +58,9 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jTextField10 = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
 
         getContentPane().setLayout(null);
 
@@ -65,7 +68,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jLabel3.setText("Tratamientos");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 40, 140, 30);
+        jLabel3.setBounds(230, 40, 140, 30);
 
         jLabel5.setText("Tipo ");
         getContentPane().add(jLabel5);
@@ -110,11 +113,11 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(190, 220, 93, 23);
+        jRadioButton1.setBounds(200, 210, 93, 23);
 
         jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(300, 220, 73, 23);
+        jRadioButton2.setBounds(310, 210, 73, 23);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
@@ -139,7 +142,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(490, 10, 80, 23);
+        jButton1.setBounds(530, 0, 80, 23);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
@@ -147,15 +150,15 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(360, 0, 80, 23);
+        jButton3.setBounds(350, 0, 80, 23);
 
-        jButton4.setText("Buscar");
+        jButton4.setText("Buscar Por");
         getContentPane().add(jButton4);
-        jButton4.setBounds(270, 30, 70, 23);
+        jButton4.setBounds(450, 260, 100, 23);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(360, 30, 80, 23);
+        jButton5.setBounds(440, 0, 80, 23);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
@@ -168,7 +171,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(270, 260, 280, 20);
+        jComboBox2.setBounds(230, 260, 100, 20);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -189,7 +192,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jLabel16.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel16.setText("Listado : tratamientos");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(20, 260, 210, 20);
+        jLabel16.setBounds(10, 260, 230, 20);
 
         jLabel17.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel17.setText("Listado : medicamentos");
@@ -219,6 +222,12 @@ public class TratamientoView extends javax.swing.JInternalFrame {
         jTextField10.setText("texto medicamentos");
         getContentPane().add(jTextField10);
         jTextField10.setBounds(100, 150, 430, 20);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(10, 20, 140, 10);
+        getContentPane().add(jSeparator2);
+        jSeparator2.setBounds(160, 30, 470, 10);
+        getContentPane().add(jSeparator3);
+        jSeparator3.setBounds(10, 240, 610, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -252,6 +261,9 @@ public class TratamientoView extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
