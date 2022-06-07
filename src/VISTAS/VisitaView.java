@@ -9,12 +9,12 @@ package VISTAS;
  *
  * @author Barbara
  */
-public class ClienteView extends javax.swing.JInternalFrame {
+public class VisitaView extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form MascotaView
      */
-    public ClienteView() {
+    public VisitaView() {
         initComponents();
     }
 
@@ -28,128 +28,150 @@ public class ClienteView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jSeparator1 = new javax.swing.JSeparator();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jTextField10 = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
 
         getContentPane().setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel3.setText("Cliente N°");
+        jLabel3.setText("Visitas");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(170, 90, 120, 30);
+        jLabel3.setBounds(270, 40, 90, 30);
 
-        jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(400, 150, 70, 20);
-
-        jLabel5.setText("DNI");
+        jLabel5.setText("Tipo ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 150, 70, 20);
+        jLabel5.setBounds(270, 90, 70, 20);
 
         jTextField3.setText("jTextField1");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(60, 150, 90, 20);
+        jTextField3.setBounds(350, 90, 90, 20);
 
-        jLabel6.setText("Apelldio");
+        jLabel6.setText("Precio");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(180, 150, 70, 20);
+        jLabel6.setBounds(20, 180, 70, 20);
 
         jTextField4.setText("jTextField1");
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(240, 150, 140, 20);
+        jTextField4.setBounds(100, 180, 90, 20);
 
-        jTextField5.setText("jTextField1");
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(450, 150, 140, 20);
+        jLabel7.setText("Medicamentos");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(10, 150, 80, 20);
 
-        jTextField6.setText("devuelva el id_cliente por defecto");
+        jLabel8.setText("Tratamiento  N°:");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(10, 90, 90, 20);
+
+        jTextField6.setText("jTextField1");
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(300, 90, 180, 30);
+        jTextField6.setBounds(100, 90, 90, 20);
 
-        jLabel9.setText("Direcion");
+        jLabel9.setText("Descripcion");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(20, 190, 120, 20);
+        jLabel9.setBounds(10, 120, 120, 20);
 
-        jTextField7.setText("jTextField1");
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(150, 250, 410, 20);
-
-        jLabel10.setText("Contacto Alternativo");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(20, 250, 100, 20);
+        jTextField9.setText("texto descripcion");
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField9);
+        jTextField9.setBounds(100, 120, 430, 20);
 
         jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(150, 290, 93, 23);
+        jRadioButton1.setBounds(200, 210, 93, 23);
 
         jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(360, 290, 65, 23);
+        jRadioButton2.setBounds(310, 210, 73, 23);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(10, 0, 171, 20);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 540, 570, 60);
+
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(470, 40, 80, 23);
+        jButton1.setBounds(530, 0, 80, 23);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(160, 40, 71, 23);
+        jButton2.setBounds(260, 0, 71, 23);
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(260, 40, 80, 23);
+        jButton3.setBounds(350, 0, 80, 23);
 
         jButton4.setText("Buscar Por");
         getContentPane().add(jButton4);
-        jButton4.setBounds(330, 480, 110, 23);
+        jButton4.setBounds(450, 260, 100, 23);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(370, 40, 80, 23);
+        jButton5.setBounds(440, 0, 80, 23);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(270, 500, 280, 20);
 
         jLabel15.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
-        jLabel15.setText("Listado de Clientes");
+        jLabel15.setText("Listado : precios");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(100, 480, 200, 20);
+        jLabel15.setBounds(10, 500, 230, 20);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(290, 350, 280, 20);
+        jComboBox2.setBounds(230, 260, 100, 20);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,41 +187,54 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jTable2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 400, 570, 60);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(10, 22, 130, 10);
-
-        jTextField9.setText("jTextField1");
-        getContentPane().add(jTextField9);
-        jTextField9.setBounds(150, 190, 300, 20);
-
-        jLabel11.setText("Telefono");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(20, 220, 70, 20);
-
-        jTextField10.setText("jTextField1");
-        getContentPane().add(jTextField10);
-        jTextField10.setBounds(150, 220, 410, 20);
+        jScrollPane2.setBounds(10, 300, 570, 60);
 
         jLabel16.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
-        jLabel16.setText("Mascotas a su cargo");
+        jLabel16.setText("Listado : tratamientos");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(30, 350, 200, 20);
+        jLabel16.setBounds(10, 260, 230, 20);
 
-        jButton6.setText("Buscar");
-        getContentPane().add(jButton6);
-        jButton6.setBounds(70, 40, 70, 23);
+        jLabel17.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel17.setText("Listado : medicamentos");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(10, 380, 230, 20);
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox3);
+        jComboBox3.setBounds(270, 380, 280, 20);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(20, 420, 570, 60);
+
+        jTextField10.setText("texto medicamentos");
+        getContentPane().add(jTextField10);
+        jTextField10.setBounds(100, 150, 430, 20);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(10, 20, 140, 10);
         getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(50, 72, 530, 10);
+        jSeparator2.setBounds(160, 30, 470, 10);
         getContentPane().add(jSeparator3);
-        jSeparator3.setBounds(20, 320, 0, 2);
-        getContentPane().add(jSeparator4);
-        jSeparator4.setBounds(20, 320, 570, 10);
-        getContentPane().add(jSeparator5);
-        jSeparator5.setBounds(10, 470, 590, 2);
+        jSeparator3.setBounds(10, 240, 610, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -208,33 +243,34 @@ public class ClienteView extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
