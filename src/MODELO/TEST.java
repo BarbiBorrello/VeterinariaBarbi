@@ -183,14 +183,10 @@ public class TEST {
 //    System.out.println(m.getCliente());
 //}
 
-List <Mascota> especies = md.obtenerEspecies("Perro");
 
-for (Mascota m : especies){
-    System.out.println(m.getAlias());
+ cd.buscarClientexDNI(25664823);
+ cd.buscarClientexDNI(5530976);
 
-    System.out.println(m.getId_mascota());
-//    System.out.println(m.getCliente());
-}
 
 
 
