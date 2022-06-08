@@ -76,7 +76,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jTextField3.setText("jTextField1");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(350, 90, 90, 20);
+        jTextField3.setBounds(350, 90, 90, 24);
 
         jLabel6.setText("Precio");
         getContentPane().add(jLabel6);
@@ -84,7 +84,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jTextField4.setText("jTextField1");
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(100, 180, 90, 20);
+        jTextField4.setBounds(100, 180, 90, 24);
 
         jLabel7.setText("Medicamentos");
         getContentPane().add(jLabel7);
@@ -96,7 +96,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jTextField6.setText("jTextField1");
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(100, 90, 90, 20);
+        jTextField6.setBounds(100, 90, 90, 24);
 
         jLabel9.setText("Descripcion");
         getContentPane().add(jLabel9);
@@ -109,15 +109,15 @@ public class TratamientoView extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(100, 120, 430, 20);
+        jTextField9.setBounds(100, 120, 430, 24);
 
         jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(200, 210, 93, 23);
+        jRadioButton1.setBounds(200, 210, 93, 28);
 
         jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(310, 210, 73, 23);
+        jRadioButton2.setBounds(310, 210, 73, 28);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
@@ -142,27 +142,27 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(530, 0, 80, 23);
+        jButton1.setBounds(530, 0, 80, 24);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(270, 0, 71, 23);
+        jButton2.setBounds(270, 0, 57, 24);
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(350, 0, 80, 23);
+        jButton3.setBounds(350, 0, 80, 24);
 
         jButton4.setText("Buscar Por");
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 260, 100, 23);
+        jButton4.setBounds(450, 260, 100, 24);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(440, 0, 80, 23);
+        jButton5.setBounds(440, 0, 80, 24);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(270, 500, 280, 20);
+        jComboBox1.setBounds(270, 500, 280, 26);
 
         jLabel15.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel15.setText("Listado : precios");
@@ -171,7 +171,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(230, 260, 100, 20);
+        jComboBox2.setBounds(230, 260, 100, 26);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -201,7 +201,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox3);
-        jComboBox3.setBounds(270, 380, 280, 20);
+        jComboBox3.setBounds(270, 380, 280, 26);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -221,7 +221,7 @@ public class TratamientoView extends javax.swing.JInternalFrame {
 
         jTextField10.setText("texto medicamentos");
         getContentPane().add(jTextField10);
-        jTextField10.setBounds(100, 150, 430, 20);
+        jTextField10.setBounds(100, 150, 430, 24);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(10, 20, 140, 10);
         getContentPane().add(jSeparator2);

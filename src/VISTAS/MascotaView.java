@@ -94,7 +94,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField1.setText("jTextField1");
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(100, 210, 90, 20);
+        jTextField1.setBounds(100, 210, 90, 24);
 
         jLabel4.setText("Sexo");
         getContentPane().add(jLabel4);
@@ -102,7 +102,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField2.setText("jTextField1");
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(350, 210, 90, 20);
+        jTextField2.setBounds(350, 210, 90, 24);
 
         jLabel5.setText("Alias:");
         getContentPane().add(jLabel5);
@@ -110,7 +110,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField3.setText("jTextField1");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(100, 120, 90, 20);
+        jTextField3.setBounds(100, 120, 90, 24);
 
         jLabel6.setText("Especie: ");
         getContentPane().add(jLabel6);
@@ -118,7 +118,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField4.setText("jTextField1");
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(100, 150, 90, 20);
+        jTextField4.setBounds(100, 150, 90, 24);
 
         jLabel7.setText("Peso Promedio :");
         getContentPane().add(jLabel7);
@@ -126,7 +126,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField5.setText("jTextField1");
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(100, 180, 90, 20);
+        jTextField5.setBounds(100, 180, 90, 24);
 
         jLabel8.setText("Paciente N°:");
         getContentPane().add(jLabel8);
@@ -134,7 +134,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField6.setText("jTextField1");
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(100, 90, 90, 20);
+        jTextField6.setBounds(100, 90, 90, 24);
 
         jLabel9.setText("Fecha de Nacimiento:");
         getContentPane().add(jLabel9);
@@ -142,7 +142,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField7.setText("jTextField1");
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(350, 90, 90, 20);
+        jTextField7.setBounds(350, 90, 90, 24);
 
         jLabel10.setText("Edad:");
         getContentPane().add(jLabel10);
@@ -150,7 +150,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField8.setText("jTextField1");
         getContentPane().add(jTextField8);
-        jTextField8.setBounds(350, 120, 90, 20);
+        jTextField8.setBounds(350, 120, 90, 24);
 
         jLabel11.setText("Color de pelaje:");
         getContentPane().add(jLabel11);
@@ -158,7 +158,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField9.setText("jTextField1");
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(350, 150, 90, 20);
+        jTextField9.setBounds(350, 150, 90, 24);
 
         jLabel12.setText("Peso Actual:");
         getContentPane().add(jLabel12);
@@ -166,19 +166,19 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jTextField10.setText("jTextField1");
         getContentPane().add(jTextField10);
-        jTextField10.setBounds(350, 180, 90, 20);
+        jTextField10.setBounds(350, 180, 90, 24);
 
         jRadioButton1.setText("Fallecido");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(60, 250, 93, 23);
+        jRadioButton1.setBounds(60, 250, 93, 28);
 
         jRadioButton2.setText("Vacunado");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(210, 250, 73, 23);
+        jRadioButton2.setBounds(210, 250, 87, 28);
 
         jRadioButton3.setText("Castrado");
         getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(350, 250, 69, 23);
+        jRadioButton3.setBounds(350, 250, 83, 28);
 
         jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel13.setText("Datos Basicos");
@@ -207,27 +207,27 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(550, 10, 80, 23);
+        jButton1.setBounds(550, 10, 80, 24);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(290, 10, 71, 23);
+        jButton2.setBounds(290, 10, 57, 24);
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(370, 10, 80, 23);
+        jButton3.setBounds(370, 10, 80, 24);
 
         jButton4.setText("Buscar Por:");
         getContentPane().add(jButton4);
-        jButton4.setBounds(320, 520, 100, 23);
+        jButton4.setBounds(320, 520, 100, 24);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(460, 10, 80, 23);
+        jButton5.setBounds(460, 10, 80, 24);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(210, 400, 280, 20);
+        jComboBox1.setBounds(210, 400, 280, 26);
 
         jLabel15.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel15.setText("Listado de Mascotas");
@@ -236,7 +236,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(200, 290, 280, 20);
+        jComboBox2.setBounds(200, 290, 280, 26);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -256,7 +256,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jRadioButton4.setText("Desparacitado");
         getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(470, 250, 95, 23);
+        jRadioButton4.setBounds(470, 250, 113, 28);
 
         jLabel16.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel16.setText("Ultima Visita");
@@ -265,7 +265,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
 
         jButton6.setText("Buscar");
         getContentPane().add(jButton6);
-        jButton6.setBounds(200, 10, 70, 23);
+        jButton6.setBounds(200, 10, 70, 24);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(10, 20, 130, 10);
         getContentPane().add(jSeparator2);
@@ -273,7 +273,7 @@ public class MascotaView extends javax.swing.JInternalFrame {
         getContentPane().add(jSeparator3);
         jSeparator3.setBounds(20, 40, 630, 10);
         getContentPane().add(jSeparator4);
-        jSeparator4.setBounds(10, 490, 50, 10);
+        jSeparator4.setBounds(10, 490, 0, 2);
         getContentPane().add(jSeparator5);
         jSeparator5.setBounds(10, 500, 640, 10);
 
