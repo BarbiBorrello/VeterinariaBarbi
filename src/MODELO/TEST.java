@@ -182,10 +182,22 @@ public class TEST {
 //    System.out.println(m.getId_mascota());
 //    System.out.println(m.getCliente());
 //}
+//
+//
+// cd.buscarClientexDNI(25664823);
+// cd.buscarClientexDNI(5530976);
+ 
+// cd.buscarClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
+ 
+ List <Cliente> clientesApNom = cd.buscarClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
+ 
+ for( Cliente c : clientesApNom){
+     System.out.println(c.getDni());
+     
+ }
+ 
+ 
 
-
- cd.buscarClientexDNI(25664823);
- cd.buscarClientexDNI(5530976);
 
 
 

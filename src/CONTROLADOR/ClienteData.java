@@ -325,23 +325,23 @@ public class ClienteData {
         return cliente;
     }
     
-    public Cliente buscarClientexAPELLIDO(String p_apellido) {
-
-        // Iniciacion null de la variable cliente
-        Cliente cliente = null;
+    public List <Cliente> buscarClientexAPELLIDOyNOMBRE(String p_apellido,String p_nombre_duenio) {
+        
+        ArrayList<Cliente> clientesApNom = new ArrayList<Cliente>();
 
         // String de consulta a base de datos
-        String sql = "SELECT * FROM cliente WHERE activo = 1 apellido LIKE \"%?%\"";
+        
 
         try {
+            
+            String sql = "SELECT * FROM cliente WHERE `activo` = 1 AND apellido LIKE \"%?%\" AND  nombre_duenio LIKE \"%?%\"";
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1,p_apellido);
-
+         
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
 
                 /* Instanciado de cliente encontrado en la BD con todos sus parametros */
-                cliente = new Cliente();
+                Cliente cliente = new Cliente();
                 cliente.setId_cliente(rs.getInt("id_cliente"));
                 cliente.setDni(rs.getLong("dni"));
                 cliente.setApellido(rs.getString("apellido"));
@@ -351,21 +351,15 @@ public class ClienteData {
                 cliente.setContactoA("contacto_alternativo");
                 cliente.setActivo(rs.getBoolean("activo"));
 
-                // Mensaje de cliente encontrado
-                JOptionPane.showMessageDialog(null, cliente.getApellido()+" "+cliente.getNombreD());
-
-            } else {
-                // Mensaje de cliente no encontrado
-                JOptionPane.showMessageDialog(null, " apellido inexistente");
+                clientesApNom.add(cliente);
 
             }
             ps.close();
+
         } catch (SQLException ex) {
-            // Mensaje de error de acceso a la base de datos
-            JOptionPane.showMessageDialog(null, " Error de conexion desde buscar por apellido " + ex);
-
+            System.out.println("Error a buscar clientes por apellido y nombre: " + ex.getMessage());
         }
+        return clientesApNom;
+    }
+}
 
-        return cliente;
-    }
-    }
