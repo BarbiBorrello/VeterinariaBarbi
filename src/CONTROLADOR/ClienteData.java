@@ -264,7 +264,7 @@ public class ClienteData {
         }
         return clientes;
     }
-// se utiliza la para vista CONSULTAS//
+// se utiliza la para vista CONSULTAS DE CLIENTES//
 
     public List<Cliente> consultaClientexAPELLIDOyNOMBRE(String p_apellido, String p_nombre_duenio) {
 
@@ -273,8 +273,12 @@ public class ClienteData {
         // String de consulta a base de datos
         try {
 
-            String sql = "SELECT * FROM cliente WHERE activo = 1 AND apellido LIKE \"%?%\" AND  nombre_duenio LIKE \"%?%\"";
+            String sql = "SELECT * FROM cliente WHERE activo = 1 AND apellido LIKE ?  AND  nombre_duenio LIKE ? ";
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            
+             // CONSULTA LIKE //
+            ps.setString(1, "%" + p_apellido + "%");
+            ps.setString(2, "%" + p_nombre_duenio + "%");
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

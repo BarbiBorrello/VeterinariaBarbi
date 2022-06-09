@@ -127,7 +127,7 @@ public class TEST {
 //
 //            }
 // Metodo: CLIENTE_consultaClientex NombreyApellido //-----------------------------------------------------------------//
-//            
+//             
 //List<Cliente> clientesApNom = cd.consultaClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
 //
 //            for (Cliente c : clientesApNom) {
