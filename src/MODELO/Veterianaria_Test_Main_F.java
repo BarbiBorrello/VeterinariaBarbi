@@ -75,7 +75,8 @@ public class Veterianaria_Test_Main_F {
                 System.out.println(c1.toString());
             }
             */
-            
+             System.out.println(md.pesoPromedio(1));
+            md.actualizarPesoPromedio(1, md.pesoPromedio(1));
 
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Veterianaria_Test_Main_F.class.getName()).log(Level.SEVERE, null, ex);

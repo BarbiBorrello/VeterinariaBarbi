@@ -431,6 +431,27 @@ public class MascotaData {
 
         return promedio;
     }
+    
+   public void actualizarPesoPromedio(int p_id_mascota, double p_pesoPromedio){
+               String sql = "UPDATE mascota SET peso_promedio = ? WHERE id_mascota=?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setDouble(1, p_pesoPromedio);
+            ps.setInt(2, p_id_mascota);
+            int rs = ps.executeUpdate();
+
+            if (rs > 0) {
+                JOptionPane.showMessageDialog(null, "Se actualizo el peso promedio de la mascota ");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se pudo actualizar el peso promedio de la mascota ");
+            }
+
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error de conexion al actualizar el peso promedio de Mascota " + ex);
+
+        }
+   }
  
   public List<Mascota> obtenerEspecies(String p_especie){
         
