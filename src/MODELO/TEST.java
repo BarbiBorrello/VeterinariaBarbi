@@ -124,6 +124,8 @@ public class TEST {
                 System.out.println(c.getId_cliente());
                  System.out.println(c.getApellido());
                  System.out.println(c.getNombreD());
+                 System.out.println(c.getDni());
+                 
             }
 
 
