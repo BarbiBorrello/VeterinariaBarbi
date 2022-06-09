@@ -114,26 +114,36 @@ public class TEST {
 // Cliente inexistente en la base // 
 //cd.activarCliente(20);
 
-/// Metodo: CLIENTE_consultaCliente //-----------------------------------------------------------------
-//         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-
-            List <Cliente> clientes = cd.consultaClientes();
+// Metodo: CLIENTE_consultaCliente //-----------------------------------------------------------------
+//         
+//ArrayList<Cliente> clientes = new ArrayList<Cliente>();
             
-                    
-            for (Cliente c : clientes) {
-                System.out.println(c.getId_cliente());
-                 System.out.println(c.getApellido());
-                 System.out.println(c.getNombreD());
-                 System.out.println(c.getDni());
-                 
-            }
+// lista vacia //
+//            
+//List<Cliente> clientes = cd.cnsultaClientes();
+//
+//            for (Cliente c : clientes) {
+//                System.out.println(c.toString());
+//
+//            }
+// Metodo: CLIENTE_consultaClientex NombreyApellido //-----------------------------------------------------------------//
+//            
+//List<Cliente> clientesApNom = cd.consultaClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
+//
+//            for (Cliente c : clientesApNom) {
+//                
+//                System.out.println(c.toString());
+//            }  
 
-
-
-            
-            
-            
-  
+//  Metodo: CLIENTE_consultaClientesActivos //-----------------------------------------------------------------//
+//            
+//List<Cliente> clientesActivos = cd.listasClientes_ACTIVOS(true);
+//
+//            for (Cliente c : clientesActivos) {
+//                
+//                System.out.println(c.toString());
+//      }
+//        
 
 
 

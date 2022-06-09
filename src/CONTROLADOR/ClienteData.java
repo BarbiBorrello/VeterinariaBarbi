@@ -145,7 +145,7 @@ public class ClienteData {
 
         return cliente;
     }
-    
+
     // p_cliente sin id_cliente //
     public void modificarCliente(int p_id_cliente, Cliente p_cliente) {
 
@@ -251,7 +251,7 @@ public class ClienteData {
                 cliente.setNombreD(rs.getString("nombre_duenio"));
                 cliente.setDireccion(rs.getString("direccion"));
                 cliente.setTelefono(rs.getString("telefono"));
-                cliente.setContactoA("contacto_alternativo");
+                cliente.setContactoA(rs.getString("contacto_alternativo"));
                 cliente.setActivo(rs.getBoolean("activo"));
 
                 clientes.add(cliente);
@@ -290,6 +290,7 @@ public class ClienteData {
                 cliente.setActivo(rs.getBoolean("activo"));
 
                 clientesApNom.add(cliente);
+                
 
             }
             ps.close();
@@ -298,8 +299,7 @@ public class ClienteData {
             System.out.println("Error a buscar clientes por apellido y nombre: " + ex.getMessage());
         }
         return clientesApNom;
- 
-    
+
     }
 // para vista CONSULTA//
 
@@ -312,7 +312,6 @@ public class ClienteData {
 
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, p_activo ? 1 : 0);
-
 
             ResultSet rs = ps.executeQuery();
             Cliente cliente;
