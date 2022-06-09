@@ -1470,7 +1470,8 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
     }
 
     private void rellenarCampos(Cliente p_cliente) {
-        jTextIDCliente.setText(Integer.toString(p_cliente.getId_cliente()));
+        
+        // if si el cliente no es nulo //
         jTextDNI.setText(Long.toString(p_cliente.getDni()));
         jTextApellido.setText(p_cliente.getApellido());
         jTextNombre.setText(p_cliente.getNombreD());

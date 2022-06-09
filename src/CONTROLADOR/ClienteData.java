@@ -334,7 +334,7 @@ public class ClienteData {
 
         try {
             
-            String sql = "SELECT * FROM cliente WHERE `activo` = 1 AND apellido LIKE \"%?%\" AND  nombre_duenio LIKE \"%?%\"";
+            String sql = "SELECT * FROM cliente WHERE activo = 1 AND apellido LIKE \"%?%\" AND  nombre_duenio LIKE \"%?%\"";
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
          
             ResultSet rs = ps.executeQuery();
