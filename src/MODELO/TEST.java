@@ -15,6 +15,7 @@ import CONTROLADOR.Conexion;
 import CONTROLADOR.MascotaData;
 import CONTROLADOR.TratamientoData;
 import CONTROLADOR.VisitaData;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,14 +40,14 @@ public class TEST {
             
 //----------------------------------CLIENTE DATA-------------------------------//
             
-// Metodo: CLIENTE_AGREGAR CLIENTE /         
+// Metodo: CLIENTE_AGREGAR CLIENTE / --------------------------------------------------------------------------------        
             
 // Pruebas exitosas en documento: Pruebas_main_CLASE_MODELO_  EXITOSAS//
 //// desde la vista:
 //confirma?
 //carga exitosa OK //        
             
-// Metodo: CLIENTE_Buscar por id de cliente //
+// Metodo: CLIENTE_Buscar por id de cliente //------------------------------------------------------------------------
 // 
 // Cliente existente en la base // 
 
@@ -62,7 +63,7 @@ public class TEST {
 
 //  opcion agregar cliente desde la vista// 
 
-// Metodo: CLIENTE_Buscar por dni //
+// Metodo: CLIENTE_Buscar por dni //-------------------------------------------------------------------------------
 
 // Cliente existente en la base // 
 
@@ -82,7 +83,7 @@ public class TEST {
 // opcion de agregar cliente desde la vista// 
 
 
-// Metodo: CLIENTE_modificar cliente //
+// Metodo: CLIENTE_modificar cliente //--------------------------------------------------------------------
 
 // Cliente existente en la base // 
 
@@ -96,10 +97,34 @@ public class TEST {
 // Cliente inexistente en la base // 
 //cd.modificarCliente(1, cliente20);
 
+// Metodo: CLIENTE_borrar cliente //-----------------------------------------------------------------
+
+// Cliente existente en la base // 
+//cd.borrarCliente(7);
+
+// Cliente existente en la base // 
+//cd.borrarCliente(37);
 
 
+// Metodo: CLIENTE_activar cliente //-----------------------------------------------------------------
 
+// Cliente existente en la base // 
+//cd.activarCliente(7);
 
+// Cliente inexistente en la base // 
+//cd.activarCliente(20);
+
+/// Metodo: CLIENTE_consultaCliente //-----------------------------------------------------------------
+//         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+
+            List <Cliente> clientes = cd.consultaClientes();
+            
+                    
+            for (Cliente c : clientes) {
+                System.out.println(c.getId_cliente());
+                 System.out.println(c.getApellido());
+                 System.out.println(c.getNombreD());
+            }
 
 
 

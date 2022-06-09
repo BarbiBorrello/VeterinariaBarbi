@@ -26,8 +26,11 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jM_FICHA_MASCOTA">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ficha MASCOTAS"/>
+                <Property name="text" type="java.lang.String" value="Ficha MASCOTA"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jM_FICHA_MASCOTAActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
