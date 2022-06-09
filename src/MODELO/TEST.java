@@ -143,9 +143,10 @@ public class TEST {
 //                
 //                System.out.println(c.toString());
 //      }
-//        
 
+//  Metodo: CLIENTE_buscar todas las mascotas de un mismo Cliente //-------------------------------------------------
 
+List<Mascota> mascotaSdeCliente = cd.buscarMascotasdeCliente(5530976);
 
 
 
