@@ -227,7 +227,7 @@ public class ClienteData {
 
         }
     }
-
+// se utiliza para la vista CONSULTAS//
     public List<Cliente> consultaClientes() {
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
@@ -261,7 +261,7 @@ public class ClienteData {
         }
         return clientes;
     }
-
+// se utiliza la para vista CONSULTAS//
     public List<Cliente> consultaClientexAPELLIDOyNOMBRE(String p_apellido, String p_nombre_duenio) {
 
         ArrayList<Cliente> clientesApNom = new ArrayList<Cliente>();

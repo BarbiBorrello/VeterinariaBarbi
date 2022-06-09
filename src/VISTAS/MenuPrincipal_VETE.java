@@ -170,6 +170,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jSeparator11 = new javax.swing.JSeparator();
         jSeparator12 = new javax.swing.JSeparator();
         jSeparator13 = new javax.swing.JSeparator();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -203,7 +204,6 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1000,6 +1000,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         );
 
         jtpCONSULTAS.addTab("Tratamientos", jPanel3);
+        jtpCONSULTAS.addTab("Consultas", jTabbedPane2);
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel3.setText("Cliente N°");
@@ -1279,7 +1280,6 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jTextDireccion, jTextTelefono});
 
         jtpCONSULTAS.addTab("Clientes", jPanel1);
-        jtpCONSULTAS.addTab("Consultas", jTabbedPane2);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
