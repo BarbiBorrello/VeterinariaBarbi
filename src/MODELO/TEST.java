@@ -59,7 +59,8 @@ public class TEST {
 //  System.out.println(cd.buscarCliente(32));
 //  System.out.println(cd.buscarCliente(198));
 //  System.out.println(cd.buscarCliente(55));
-//  agregar opcion de agregar cliente desde la vista// 
+
+//  opcion agregar cliente desde la vista// 
 
 // Metodo: CLIENTE_Buscar por dni //
 
@@ -68,7 +69,8 @@ public class TEST {
 //System.out.println(cd.buscarClientexDNI(23456789));
 //System.out.println(cd.buscarClientexDNI(1369026));
 //System.out.println(cd.buscarClientexDNI(5530976));
-// agregar opcion de agregar cliente desde la vista// 
+
+// opcion de agregar cliente desde la vista// 
 
 
 // Cliente inexistente en la base //
@@ -76,6 +78,27 @@ public class TEST {
 //System.out.println(cd.buscarClientexDNI(4567809));
 //System.out.println(cd.buscarClientexDNI(5860456));
 //System.out.println(cd.buscarClientexDNI(9834574));
+
+// opcion de agregar cliente desde la vista// 
+
+
+// Metodo: CLIENTE_modificar cliente //
+
+// Cliente existente en la base // 
+
+//Cliente cliente1 = new Cliente(23456789, "Francella", "Guillermo", "Avenida Siempre viva 123", "12345678", "Pedrito rulito", true);
+//cd.modificarCliente(1,cliente1);
+
+//Cliente cliente2 = new Cliente ( 13690269, "Martinez", "Hector Antonio", "Juan Gilberto Funes 178 (Cerro de Oro)","266450330", "Liliana", true);
+//cd.modificarCliente(2,cliente2);
+
+
+// Cliente inexistente en la base // 
+//cd.modificarCliente(1, cliente20);
+
+
+
+
 
 
 

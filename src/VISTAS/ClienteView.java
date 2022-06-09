@@ -40,13 +40,10 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -60,6 +57,7 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
+        jLabel14 = new javax.swing.JLabel();
 
         getContentPane().setLayout(null);
 
@@ -67,89 +65,65 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jLabel3.setText("Cliente N°");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(170, 90, 120, 30);
+        jLabel3.setBounds(190, 110, 120, 30);
 
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(400, 150, 70, 20);
+        jLabel2.setBounds(420, 190, 70, 20);
 
         jLabel5.setText("DNI");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 150, 70, 20);
-
-        jTextField3.setText("jTextField1");
+        jLabel5.setBounds(30, 190, 70, 20);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(60, 150, 90, 20);
+        jTextField3.setBounds(90, 190, 90, 20);
 
-        jLabel6.setText("Apelldio");
+        jLabel6.setText("Apellido");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(180, 150, 70, 20);
-
-        jTextField4.setText("jTextField1");
+        jLabel6.setBounds(200, 190, 70, 20);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(240, 150, 140, 20);
-
-        jTextField5.setText("jTextField1");
+        jTextField4.setBounds(260, 190, 140, 20);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(450, 150, 140, 20);
-
-        jTextField6.setText("devuelva el id_cliente por defecto");
+        jTextField5.setBounds(470, 190, 140, 20);
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(300, 90, 180, 30);
+        jTextField6.setBounds(330, 110, 180, 30);
 
         jLabel9.setText("Direcion");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(20, 190, 120, 20);
-
-        jTextField7.setText("jTextField1");
+        jLabel9.setBounds(30, 240, 120, 20);
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(150, 250, 410, 20);
+        jTextField7.setBounds(200, 300, 410, 20);
 
         jLabel10.setText("Contacto Alternativo");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(20, 250, 100, 20);
+        jLabel10.setBounds(30, 300, 100, 20);
 
         jRadioButton1.setText("Activo");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(150, 290, 93, 23);
+        jRadioButton1.setBounds(200, 340, 93, 23);
 
         jRadioButton2.setText("Inactivo");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(360, 290, 65, 23);
-
-        jLabel13.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
-        jLabel13.setText("Datos Basicos");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(10, 0, 171, 20);
+        jRadioButton2.setBounds(390, 340, 65, 23);
 
         jButton1.setText("Salir");
         getContentPane().add(jButton1);
-        jButton1.setBounds(470, 40, 80, 23);
+        jButton1.setBounds(510, 60, 80, 23);
 
         jButton2.setText("Guardar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(160, 40, 71, 23);
+        jButton2.setBounds(170, 60, 71, 23);
 
         jButton3.setText("Actualizar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(260, 40, 80, 23);
-
-        jButton4.setText("Buscar Por");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(330, 480, 110, 23);
+        jButton3.setBounds(270, 60, 80, 23);
 
         jButton5.setText("Borrar");
         getContentPane().add(jButton5);
-        jButton5.setBounds(370, 40, 80, 23);
-
-        jLabel15.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
-        jLabel15.setText("Listado de Clientes");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(100, 480, 200, 20);
+        jButton5.setBounds(400, 60, 80, 23);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(290, 350, 280, 20);
+        jComboBox2.setBounds(310, 400, 280, 20);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,38 +139,39 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jTable2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 400, 570, 60);
+        jScrollPane2.setBounds(40, 450, 570, 60);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(10, 22, 130, 10);
-
-        jTextField9.setText("jTextField1");
+        jSeparator1.setBounds(10, 40, 630, 10);
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(150, 190, 300, 20);
+        jTextField9.setBounds(200, 240, 410, 20);
 
         jLabel11.setText("Telefono");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(20, 220, 70, 20);
-
-        jTextField10.setText("jTextField1");
+        jLabel11.setBounds(30, 270, 70, 20);
         getContentPane().add(jTextField10);
-        jTextField10.setBounds(150, 220, 410, 20);
+        jTextField10.setBounds(200, 270, 410, 20);
 
         jLabel16.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
         jLabel16.setText("Mascotas a su cargo");
         getContentPane().add(jLabel16);
-        jLabel16.setBounds(30, 350, 200, 20);
+        jLabel16.setBounds(80, 400, 200, 20);
 
         jButton6.setText("Buscar");
         getContentPane().add(jButton6);
-        jButton6.setBounds(70, 40, 70, 23);
+        jButton6.setBounds(70, 60, 70, 23);
         getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(50, 72, 530, 10);
+        jSeparator2.setBounds(30, 100, 600, 20);
         getContentPane().add(jSeparator3);
         jSeparator3.setBounds(20, 320, 0, 2);
         getContentPane().add(jSeparator4);
-        jSeparator4.setBounds(20, 320, 570, 10);
+        jSeparator4.setBounds(40, 380, 570, 10);
         getContentPane().add(jSeparator5);
         jSeparator5.setBounds(10, 470, 590, 2);
+
+        jLabel14.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); // NOI18N
+        jLabel14.setText(" CLIENTES: Datos Basicos");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(20, 20, 270, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -206,14 +181,12 @@ public class ClienteView extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

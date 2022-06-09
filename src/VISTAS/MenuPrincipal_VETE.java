@@ -53,7 +53,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jtpCONSULTAS = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -203,13 +203,14 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jtpCONSULTAS.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 12)); // NOI18N
         jLabel1.setText("Datos del Dueño");
@@ -509,7 +510,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Mascotas", jPanel2);
+        jtpCONSULTAS.addTab("Mascotas", jPanel2);
 
         jLabel27.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel27.setText("Visitas");
@@ -753,7 +754,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Visitas", escritorio);
+        jtpCONSULTAS.addTab("Visitas", escritorio);
 
         jLabel37.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel37.setText("Tratamientos");
@@ -998,7 +999,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Tratamientos", jPanel3);
+        jtpCONSULTAS.addTab("Tratamientos", jPanel3);
 
         jLabel3.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel3.setText("Cliente N°");
@@ -1122,11 +1123,14 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(722, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(708, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1211,11 +1215,11 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(39, 39, 39)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(610, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jLabel13)
+                .addContainerGap(548, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 175, Short.MAX_VALUE)
@@ -1274,7 +1278,8 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jTextDireccion, jTextTelefono});
 
-        jTabbedPane1.addTab("Clientes", jPanel1);
+        jtpCONSULTAS.addTab("Clientes", jPanel1);
+        jtpCONSULTAS.addTab("Consultas", jTabbedPane2);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -1288,11 +1293,11 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jtpCONSULTAS)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jtpCONSULTAS)
         );
 
         pack();
@@ -1645,7 +1650,7 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
@@ -1682,5 +1687,6 @@ public class MenuPrincipal_VETE extends javax.swing.JFrame {
     private javax.swing.JTextField jTextIDCliente;
     private javax.swing.JTextField jTextNombre;
     private javax.swing.JTextField jTextTelefono;
+    private javax.swing.JTabbedPane jtpCONSULTAS;
     // End of variables declaration//GEN-END:variables
 }
