@@ -46,16 +46,17 @@ public class ClienteData {
                 cliente.setNombreD(rs.getString("nombre_duenio"));
                 cliente.setDireccion(rs.getString("direccion"));
                 cliente.setTelefono(rs.getString("telefono"));
-                cliente.setContactoA("contacto_alternativo");
+                cliente.setContactoA(rs.getString("contacto_alternativo_"));
                 cliente.setActivo(rs.getBoolean("activo"));
 
                 // Mensaje de cliente encontrado
-                JOptionPane.showMessageDialog(null, " Se encontro Id:" + cliente.getApellido()+","+cliente.getNombreD());
+                JOptionPane.showMessageDialog(null, " Cliente :" + cliente.getApellido()+","+cliente.getNombreD());
 
             } else {
                 // Mensaje de cliente no encontrado
-                JOptionPane.showMessageDialog(null, " Id de Cliente inexistente");
-
+                JOptionPane.showMessageDialog(null, " Cliente inexistente");
+                JOptionPane.showMessageDialog(null, "¿Desea ingresar un nuevo cliente?");
+             // agregar opcion de cargar nuevo cliente//
             }
             ps.close();
         } catch (SQLException ex) {
