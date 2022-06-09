@@ -21,58 +21,8 @@ public class ClienteData {
             System.out.println("Error en la conexion");
         }
     }
-
-    public Cliente buscarCliente(int p_id_cliente) {
-
-        // Iniciacion null de la variable cliente
-        Cliente cliente = null;
-
-        // String de consulta a base de datos
-        String sql = "SELECT * FROM cliente WHERE activo = 1 AND id_cliente =?;";
-
-        try {
-            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, p_id_cliente);
-
-            ResultSet rs = ps.executeQuery();
-
-            if (rs.next()) {
-
-                /* Instanciado de cliente encontrado en la BD con todos sus parametros */
-                cliente = new Cliente();
-                cliente.setId_cliente(rs.getInt("id_cliente"));
-                cliente.setDni(rs.getLong("dni"));
-                cliente.setApellido(rs.getString("apellido"));
-                cliente.setNombreD(rs.getString("nombre_duenio"));
-                cliente.setDireccion(rs.getString("direccion"));
-                cliente.setTelefono(rs.getString("telefono"));
-                cliente.setContactoA(rs.getString("contacto_alternativo_"));
-                cliente.setActivo(rs.getBoolean("activo"));
-
-                // Mensaje de cliente encontrado
-                JOptionPane.showMessageDialog(null, " Cliente :" + cliente.getApellido()+","+cliente.getNombreD());
-
-            } else {
-                // Mensaje de cliente no encontrado
-                JOptionPane.showMessageDialog(null, " Cliente inexistente");
-                JOptionPane.showMessageDialog(null, "¿Desea ingresar un nuevo cliente?");
-             // agregar opcion de cargar nuevo cliente//
-            }
-            ps.close();
-        } catch (SQLException ex) {
-            // Mensaje de error de acceso a la base de datos
-            JOptionPane.showMessageDialog(null, " Error de conexion desde buscar alumno " + ex);
-
-        }
-
-        return cliente;
-    }
-
-// El id_cliente es el índice del cliente a buscar para que modifique el resto de los datos, 
-//    que obtiene del cliente que le pasas por parámetro//    
     
-    
-    public void agregarCliente(Cliente p_cliente) {
+        public void agregarCliente(Cliente p_cliente) {
 
         // String de consulta a base de datos
         String sql = "INSERT INTO cliente (dni, apellido, nombre_duenio, direccion, telefono, contacto_alternativo, activo)  VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -104,6 +54,60 @@ public class ClienteData {
 
         }
     }
+
+    public Cliente buscarCliente(int p_id_cliente) {
+
+        // Iniciacion null de la variable cliente
+        Cliente cliente = null;
+
+        // String de consulta a base de datos
+        String sql = "SELECT * FROM cliente WHERE activo = 1 AND id_cliente =?;";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, p_id_cliente);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+
+                /* Instanciado de cliente encontrado en la BD con todos sus parametros */
+                cliente = new Cliente();
+                cliente.setId_cliente(rs.getInt("id_cliente"));
+                cliente.setDni(rs.getLong("dni"));
+                cliente.setApellido(rs.getString("apellido"));
+                cliente.setNombreD(rs.getString("nombre_duenio"));
+                cliente.setDireccion(rs.getString("direccion"));
+                cliente.setTelefono(rs.getString("telefono"));
+                cliente.setContactoA(rs.getString("contacto_alternativo"));
+                cliente.setActivo(rs.getBoolean("activo"));
+
+                // Mensaje de cliente encontrado
+                JOptionPane.showMessageDialog(null, " Cliente :" + cliente.getApellido()+","+cliente.getNombreD());
+
+            } else {
+                // Mensaje de cliente no encontrado
+                JOptionPane.showMessageDialog(null, " Cliente inexistente");
+                JOptionPane.showMessageDialog(null, "¿Desea ingresar un nuevo cliente?");
+             // agregar opcion de cargar nuevo cliente va en la vista del cliente//
+             
+            
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            // Mensaje de error de acceso a la base de datos
+            JOptionPane.showMessageDialog(null, " Error de conexion desde buscar alumno " + ex);
+
+        }
+
+        return cliente;
+    }
+
+// El id_cliente es el índice del cliente a buscar para que modifique el resto de los datos, 
+//    que obtiene del cliente que le pasas por parámetro//    
+    
+    
+
 
     public void modificarCliente(int p_id_cliente, Cliente p_cliente) {
 

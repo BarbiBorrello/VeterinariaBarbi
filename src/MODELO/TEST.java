@@ -36,33 +36,48 @@ public class TEST {
             MascotaData md = new MascotaData(conexion);
             TratamientoData td = new TratamientoData(conexion);
             VisitaData vd = new VisitaData(conexion);
-
- //  Metodo: CLIENTE_Buscar por id de cliente //
- 
+            
+//----------------------------------CLIENTE DATA-------------------------------//
+            
+// Metodo: CLIENTE_AGREGAR CLIENTE /         
+            
+// Pruebas exitosas en documento: Pruebas_main_CLASE_MODELO_  EXITOSAS//
+//// desde la vista:
+//confirma?
+//carga exitosa OK //        
+            
+// Metodo: CLIENTE_Buscar por id de cliente //
+// 
 // Cliente existente en la base // 
-//// 
+
 // System.out.println(cd.buscarCliente(1)); 
 // System.out.println(cd.buscarCliente(2)); 
 // System.out.println(cd.buscarCliente(3)); 
-//// no tira el string de contacto alternativo//   
-            
-//  Cliente inexistente en la base //  
-// 
+           
+// Cliente inexistente en la base //  
+
 //  System.out.println(cd.buscarCliente(32));
 //  System.out.println(cd.buscarCliente(198));
 //  System.out.println(cd.buscarCliente(55));
-//// agregar opcion de agregar cliente// 
+//  agregar opcion de agregar cliente desde la vista// 
 
+// Metodo: CLIENTE_Buscar por dni //
 
-////  Metodo: CLIENTE_Buscar por dni //
-//
-//// Cliente existente en la base // 
-//
+// Cliente existente en la base // 
+
 //System.out.println(cd.buscarClientexDNI(23456789));
-//System.out.println(cd.buscarClientexDNI(23456789)); 
+//System.out.println(cd.buscarClientexDNI(1369026));
+//System.out.println(cd.buscarClientexDNI(5530976));
+// agregar opcion de agregar cliente desde la vista// 
 
 
-            
+// Cliente inexistente en la base //
+
+//System.out.println(cd.buscarClientexDNI(4567809));
+//System.out.println(cd.buscarClientexDNI(5860456));
+//System.out.println(cd.buscarClientexDNI(9834574));
+
+
 
 
             
