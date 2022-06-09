@@ -259,7 +259,8 @@ public class ClienteData {
             ps.close();
 
         } catch (SQLException ex) {
-            System.out.println("Error al obtener los clientes: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al obtener listado de clientes " + ex);
+
         }
         return clientes;
     }
@@ -290,13 +291,13 @@ public class ClienteData {
                 cliente.setActivo(rs.getBoolean("activo"));
 
                 clientesApNom.add(cliente);
-                
 
             }
             ps.close();
 
         } catch (SQLException ex) {
-            System.out.println("Error a buscar clientes por apellido y nombre: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al buscar clientes por nombre y apellido" + ex);
+
         }
         return clientesApNom;
 
@@ -333,7 +334,8 @@ public class ClienteData {
             ps.close();
 
         } catch (SQLException ex) {
-            System.out.println("Error al obtener los clientes: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al buscar clientes activos" + ex);
+            
         }
         return clientesActivos;
     }
