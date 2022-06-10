@@ -223,7 +223,7 @@ public class TEST {
 
 // Metodo: MASCOTA_obtener especies   //------------------------------------------------------------------------
 
-List<Mascota> mascotas = md.obtenerEspecies("Perro");
+List<Mascota> mascotas = md.obtenerEspecies("perro");
 
             for (Mascota m : mascotas) {
                 System.out.println(m.toString());

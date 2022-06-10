@@ -84,7 +84,7 @@ public class MascotaData {
 
         Mascota mascota = null;
 
-        String sql = "SELECT * FROM mascota WHERE activo =1 AND id_mascota =? ";
+        String sql = "SELECT * FROM mascota WHERE activo =1 AND id_mascota =?;";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -92,12 +92,10 @@ public class MascotaData {
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.wasNull() == false) {
+            if (rs.next()) {
 
-                while (rs.next()) {
 
                     mascota = new Mascota();
-
                     mascota.setId_mascota(rs.getInt("id_mascota"));
                     mascota.setAlias(rs.getString("alias"));
                     mascota.setSexo(rs.getString("sexo"));
@@ -110,7 +108,7 @@ public class MascotaData {
                     mascota.setActivo(rs.getBoolean("activo"));
 
                     JOptionPane.showMessageDialog(null, "Mascota encrontrada exitosamente :" + " " + mascota.getAlias());
-                }
+   
 
             } else {
                 JOptionPane.showMessageDialog(null, "Mascota inexistente");
@@ -369,12 +367,12 @@ public class MascotaData {
   public List<Mascota> obtenerEspecies(String p_especie){
         
       ArrayList<Mascota> especies = new ArrayList<Mascota>();
-
+                Mascota especie = null;
         try {
-            String sql = "SELECT * FROM mascota WERE especie LIKE ?";
+            String sql = "SELECT * FROM mascota WHERE especie LIKE ?";
           
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, p_especie);
+            ps.setString(1,"%"+ p_especie+"%");
             
             ResultSet rs = ps.executeQuery();
 
@@ -383,8 +381,7 @@ public class MascotaData {
             while (rs.next()) {
 
                 mascota = new Mascota();
-               
-                
+
                 mascota.setId_mascota(rs.getInt("id_mascota"));
                 mascota.setAlias(rs.getString("alias"));
                 mascota.setSexo(rs.getString("sexo"));
@@ -396,10 +393,10 @@ public class MascotaData {
 //              mascota.setCliente(rs.getObject(cd.getClass().
                 mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
                 mascota.setActivo(rs.getBoolean("activo"));
-                
-                Mascota especie = null;
 
-                especies.add(especie);
+
+
+                especies.add(mascota);
             }
             ps.close();
         } catch (SQLException ex) {
