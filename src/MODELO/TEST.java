@@ -120,7 +120,7 @@ public class TEST {
             
 // lista vacia //
 //            
-//List<Cliente> clientes = cd.cnsultaClientes();
+//List<Cliente> clientes = cd.obtenerClientes();
 //
 //            for (Cliente c : clientes) {
 //                System.out.println(c.toString());
@@ -128,7 +128,7 @@ public class TEST {
 //            }
 // Metodo: CLIENTE_consultaClientex NombreyApellido //-----------------------------------------------------------------//
 //             
-//List<Cliente> clientesApNom = cd.consultaClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
+//List<Cliente> clientesApNom = cd.obtenerClientexAPELLIDOyNOMBRE("Borrello", "Barbara");
 //
 //            for (Cliente c : clientesApNom) {
 //                
@@ -137,26 +137,96 @@ public class TEST {
 
 //  Metodo: CLIENTE_consultaClientesActivos //-----------------------------------------------------------------//
 //            
-//List<Cliente> clientesActivos = cd.listasClientes_ACTIVOS(true);
+//List<Cliente> clientesActivos = cd.obtenerClientes_ACTIVOS(true);
 //
 //            for (Cliente c : clientesActivos) {
 //                
 //                System.out.println(c.toString());
 //      }
 
-
-
-
-
-
-        
-
-
+//----------------------------------MASCOTA DATA-------------------------------//
             
+// Metodo: MASCOTA_AGREGAR MASCOTA / --------------------------------------------------------------------------------        
+            
+// Pruebas exitosas en documento: Pruebas_main_CLASE_MODELO_  EXITOSAS//
+//// desde la vista:
+//confirma?
+//carga exitosa OK //   
+
+// Metodo: MASCOTA_Buscar por id de mascota //------------------------------------------------------------------------
+
+// Mascota  existente en la base // 
+//
+//md.buscarMascotaActiva(2);
+//md.buscarMascotaActiva(3);
+//md.buscarMascotaActiva(4);
+
+// Mascota  inexistente en la base //
+
+//md.buscarMascota(23);
+//md.buscarMascota(45);
+//md.buscarMascota(109);
+
+// NO TIRA EL CARTEL DE MASCOTA INEXISTENTE!! //
+
+// Metodo: MASCOTA_Buscar por Alias  //------------------------------------------------------------------------
+
+// Mascota  existente en la base // 
+
+//md.buscarMascotaxALIAS("Pablo");
+//md.buscarMascotaxALIAS("Fran");
+            
+// Mascota  inexistente en la base // 
+
+//md.buscarMascotaxALIAS("Josecito"); 
+//md.buscarMascotaxALIAS("Martita"); 
+
+// Metodo: MASCOTA_modificar   //------------------------------------------------------------------------
+
+// Mascota  existente en la base //
+
+//Mascota mascota2 = new Mascota("Lola", "hembra", "perro", "shitsu", "blanco", LocalDate.of(2015,6, 23), 7, 7.5, true, cd.buscarCliente(5));
+//md.modificarMascota(2, mascota2);
+
+// Mascota  inexistente en la base //
+//md.modificarMascota(2, mascota32);
+
+// Metodo: MASCOTA_borrar   //------------------------------------------------------------------------
+
+// Mascota  existente en la base //
+//md.borrarMascota(7);
+
+// Mascota  inexistente en la base //
+//md.borrarMascota(34);
+
+// Metodo: MASCOTA_activar   //------------------------------------------------------------------------
+
+// Mascota  existente en la base //
+
+//md.activarMascota(7);
+
+// Mascota  inexistente en la base //
+
+//md.activarMascota(45);
+
+// Metodo: MASCOTA_obtener listado   //------------------------------------------------------------------------
+
+//List<Mascota> clientes = md.buscarMascota(0);
+//
+//            for (Cliente c : clientes) {
+//                System.out.println(c.toString());
 
 
-            
-            
+
+
+
+
+
+
+
+
+
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(TEST.class.getName()).log(Level.SEVERE, null, ex);
         }
