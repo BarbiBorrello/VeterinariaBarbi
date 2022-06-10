@@ -167,7 +167,6 @@ public class TEST {
 //md.buscarMascota(45);
 //md.buscarMascota(109);
 
-// NO TIRA EL CARTEL DE MASCOTA INEXISTENTE!! //
 
 // Metodo: MASCOTA_Buscar por Alias  //------------------------------------------------------------------------
 
@@ -178,8 +177,8 @@ public class TEST {
             
 // Mascota  inexistente en la base // 
 
-//md.buscarMascotaxALIAS("Josecito"); 
-//md.buscarMascotaxALIAS("Martita"); 
+md.buscarMascotaxALIAS("Josecito"); 
+md.buscarMascotaxALIAS("Martita"); 
 
 // Metodo: MASCOTA_modificar   //------------------------------------------------------------------------
 
@@ -222,12 +221,46 @@ public class TEST {
 //            }
 
 // Metodo: MASCOTA_obtener especies   //------------------------------------------------------------------------
+//
+//List<Mascota> mascotasP = md.obtenerEspecies("perro");
+//
+//            for (Mascota m : mascotasP) {
+//                System.out.println(m.toString());
+//            }
+            
+List < Mascota> mascotasG = md.obtenerEspecies("gato");
 
-List<Mascota> mascotas = md.obtenerEspecies("perro");
+for (Mascota m : mascotasG){
+    
+    System.out.println(m.toString());
+    
+}
 
-            for (Mascota m : mascotas) {
-                System.out.println(m.toString());
-            }
+//----------------------------------TRATAMIENTO DATA-------------------------------//
+
+// Metodo: TRATAMIENTO_AGREGAR TRATAMIENTO / --------------------------------------------------------------------------------        
+            
+// Pruebas exitosas en documento: Pruebas_main_CLASE_MODELO_  EXITOSAS//
+//// desde la vista:
+//confirma?
+//carga exitosa OK //   
+
+// Metodo: TRATAMIENTO_ buscarTratamiento Activo / ------------------------------------------------------------
+
+Tratamiento tratamiento1 = new Tratamiento ("Vacunacion"," se aplica una dosis","antirrabica",1900,true);
+Tratamiento tratamiento4 = new Tratamiento ("Curaciones","ataque de jabali","antibiticos / analgesicos ",3500,true);
+            
+//td.buscarTratamientoActivo(1);
+//td.buscarTratamientoActivo(4);
+
+td.buscarTratamientoActivo(32);
+
+
+
+
+
+
+
 
 
 
