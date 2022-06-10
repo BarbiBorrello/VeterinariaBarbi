@@ -211,16 +211,23 @@ public class TEST {
 
 // Metodo: MASCOTA_obtener listado   //------------------------------------------------------------------------
 
-//List<Mascota> clientes = md.buscarMascota(0);
+//ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+            
+// lista vacia //
+//            
+//List<Mascota> mascotas = md.obtenerMascotas();
 //
-//            for (Cliente c : clientes) {
-//                System.out.println(c.toString());
+//            for (Mascota m : mascotas) {
+//                System.out.println(m.toString());
+//            }
 
+// Metodo: MASCOTA_obtener especies   //------------------------------------------------------------------------
 
+List<Mascota> mascotas = md.obtenerEspecies("Perro");
 
-
-
-
+            for (Mascota m : mascotas) {
+                System.out.println(m.toString());
+            }
 
 
 

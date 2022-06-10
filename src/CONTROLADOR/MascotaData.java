@@ -374,7 +374,8 @@ public class MascotaData {
             String sql = "SELECT * FROM mascota WERE especie LIKE ?";
           
             PreparedStatement ps = con.prepareStatement(sql);
-
+            ps.setString(1, p_especie);
+            
             ResultSet rs = ps.executeQuery();
 
             Mascota mascota;
