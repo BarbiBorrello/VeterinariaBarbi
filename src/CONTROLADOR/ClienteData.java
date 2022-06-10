@@ -346,45 +346,44 @@ public class ClienteData {
     }
     
     
-   public List<Mascota> buscarMascotasdeCliente(Long p_dni){
-       
-       ArrayList<Mascota> mascotaSdeCliente = new ArrayList<Mascota>();
-       
-               try {
-            String sql = "SELECT * FROM cliente c, mascota m WHERE m.id_cliente=c.id_cliente AND c.dni=?;";
-
-            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setLong(1,p_dni);
-
-            ResultSet rs = ps.executeQuery();
-            Cliente cliente;
-
-            while (rs.next()) {
-                // Creacion y llenado de clientes para ser insertados en la lista
-                cliente = new Cliente();
-                cliente.setId_cliente(rs.getInt("id_cliente"));
-                cliente.setDni(rs.getLong("dni"));
-                cliente.setApellido(rs.getString("apellido"));
-                cliente.setNombreD(rs.getString("nombre_duenio"));
-                cliente.setDireccion(rs.getString("direccion"));
-                cliente.setTelefono(rs.getString("telefono"));
-                cliente.setContactoA("contacto_alternativo");
-                cliente.setActivo(rs.getBoolean("activo"));
-                Mascota Cliente = null;
-
-                mascotaSdeCliente.add(Cliente);
-            }
-            ps.close();
-
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al buscar clientes activos" + ex);
-            
-        }    
-       
-        
-     return mascotaSdeCliente;   
+//   public List<Mascota> buscarMascotasdeCliente(Long p_dni){
+//       
+//       ArrayList<Mascota> mascotaSdeCliente = new ArrayList<Mascota>();
+//       
+//               try {            String sql = "SELECT * FROM cliente c, mascota m WHERE m.id_cliente=c.id_cliente AND c.dni=?;";
+//
+//            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+//            ps.setLong(1,p_dni);
+//
+//            ResultSet rs = ps.executeQuery();
+//            Cliente cliente;
+//
+//            while (rs.next()) {
+//                // Creacion y llenado de clientes para ser insertados en la lista
+//                cliente = new Cliente();
+//                cliente.setId_cliente(rs.getInt("id_cliente"));
+//                cliente.setDni(rs.getLong("dni"));
+//                cliente.setApellido(rs.getString("apellido"));
+//                cliente.setNombreD(rs.getString("nombre_duenio"));
+//                cliente.setDireccion(rs.getString("direccion"));
+//                cliente.setTelefono(rs.getString("telefono"));
+//                cliente.setContactoA("contacto_alternativo");
+//                cliente.setActivo(rs.getBoolean("activo"));
+//                Mascota Cliente = null;
+//
+//                mascotaSdeCliente.add(Cliente);
+//            }
+//            ps.close();
+//
+//        } catch (SQLException ex) {
+//            JOptionPane.showMessageDialog(null, "Error al buscar clientes activos" + ex);
+//            
+//        }    
+//       
+//        
+//     return mascotaSdeCliente;   
     }
 
 
     
-}
+
