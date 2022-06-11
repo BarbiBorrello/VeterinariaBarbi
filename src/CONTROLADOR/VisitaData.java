@@ -5,6 +5,7 @@
  */
 package CONTROLADOR;
 // algo
+
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -19,6 +20,9 @@ import MODELO.Cliente;
 import MODELO.Mascota;
 import MODELO.Tratamiento;
 import MODELO.Visita;
+import java.sql.Time;
+import java.time.Instant;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -27,11 +31,12 @@ import MODELO.Visita;
 public class VisitaData {
 
     private Connection con = null;
-    private Conexion conexion;
+    Conexion conexion;
     MascotaData md;
     TratamientoData td;
 
     public VisitaData(Conexion conexion) {
+        this.conexion = conexion;
         try {
             con = conexion.getConexion();
         } catch (SQLException ex) {
@@ -40,16 +45,14 @@ public class VisitaData {
     }
 
     public Mascota buscarMascotaActiva(int p_id_visita) {
-
+        //conexion= new Conexion();
         MascotaData md = new MascotaData(conexion);
         return md.buscarMascota(p_id_visita);
     }
 
     public Tratamiento buscarTratamiento(int p_id_tratamiento) {
-
         TratamientoData td = new TratamientoData(conexion);
         return td.buscarTratamientoActivo(p_id_tratamiento);
-
     }
 
     public void agregarVisita(Visita p_visita) {
@@ -61,11 +64,10 @@ public class VisitaData {
 
             ps.setInt(1, p_visita.getTratamiento().getId_tratamiento());
             ps.setDate(2, Date.valueOf(p_visita.getFecha_visita()));
-            ps.setInt(3,p_visita.getMascota().getId_mascota());
+            ps.setInt(3, p_visita.getMascota().getId_mascota());
             ps.setDouble(4, p_visita.getPeso());
-            int activo = p_visita.isActivo() ? 1 : 0 ;
+            int activo = p_visita.isActivo() ? 1 : 0;
             ps.setInt(5, activo);
-           
 
             ps.executeUpdate();
 
@@ -96,6 +98,7 @@ public class VisitaData {
 
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, p_visita.getTratamiento().getId_tratamiento());
+            ps.setDate(2, Date.valueOf(p_visita.getFecha_visita()));
             ps.setDate(2, Date.valueOf(p_visita.getFecha_visita()));
             ps.setInt(3, p_visita.getMascota().getId_mascota());
             ps.setDouble(4, p_visita.getPeso());
@@ -134,22 +137,22 @@ public class VisitaData {
             if (rs.next()) {
 
                 /* Instanciado de visita encontrado en la BD con todos sus parametros */
-                // parametros de BD de visita: id_visita	id_tratamiento	fecha_visita	id_mascota	peso	activo
+                // parametros de BD de visita: id_visita    id_tratamiento  fecha_visita    id_mascota  peso    activo
                 // atributos de clase Visita: int idvisita; LocalDate fecha_visita; double peso; boolean activo; Mascota mascota; Tratamiento tratamiento;
                 visita = new Visita();
-                visita.setIdvisita(rs.getInt("id_visita "));
+                visita.setIdvisita(rs.getInt("id_visita"));
                 visita.setTratamiento(buscarTratamiento(rs.getInt("id_tratamiento")));
-                visita.setFecha_visita(rs.getDate("fecha_visita").toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+                visita.setFecha_visita(rs.getDate("fecha_visita").toLocalDate());
                 visita.setMascota(buscarMascotaActiva(rs.getInt("id_mascota")));
                 visita.setPeso(rs.getDouble("peso"));
                 visita.setActivo(rs.getBoolean("activo"));
 
                 // Mensaje de visita encontrado
-                JOptionPane.showMessageDialog(null, " Se encontro Id:" + visita.toString());
+                JOptionPane.showMessageDialog(null, " Se encontro ID:" + visita.toString());
 
             } else {
                 // Mensaje de visita no encontrado
-                JOptionPane.showMessageDialog(null, " Id de visita inexistente");
+                JOptionPane.showMessageDialog(null, " ID de visita inexistente");
 
             }
             ps.close();
@@ -162,7 +165,7 @@ public class VisitaData {
         return visita;
     }
 
-    public void borrarMascota(int p_id_visita) {
+    public void borrarVisita(int p_id_visita) {
 
         // String de consulta a base de datos
         String sql = "UPDATE visita SET activo =0 WHERE id_visita=?";
@@ -196,9 +199,9 @@ public class VisitaData {
             int rs = ps.executeUpdate();
 
             if (rs > 0) {
-                JOptionPane.showMessageDialog(null, "Se activo el estado de la visita ");
+                JOptionPane.showMessageDialog(null, "Se activo el estado de la ID:" + p_id_visita);
             } else {
-                JOptionPane.showMessageDialog(null, " El id de la visita no existe ");
+                JOptionPane.showMessageDialog(null, " El id de la visita no existe");
             }
 
             ps.close();
@@ -207,11 +210,10 @@ public class VisitaData {
 
         }
     }
-    
-    
-        public void desactivarVisita(int p_id_visita) {
 
-        String sql = "UPDATE visita SET activo =- WHERE id_visita=?";
+    public void desactivarVisita(int p_id_visita) {
+
+        String sql = "UPDATE visita SET activo =0 WHERE id_visita=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, p_id_visita);
@@ -219,14 +221,14 @@ public class VisitaData {
             int rs = ps.executeUpdate();
 
             if (rs > 0) {
-                JOptionPane.showMessageDialog(null, "Se desactivo el estado de la visita ");
+                JOptionPane.showMessageDialog(null, "Se desactivo el estado de la visita ID:" + p_id_visita);
             } else {
-                JOptionPane.showMessageDialog(null, " El id de la visita no existe ");
+                JOptionPane.showMessageDialog(null, " El id de la visita no existe");
             }
 
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error de conexion desde desactivar visita " + ex);
+            JOptionPane.showMessageDialog(null, "Error de conexion desde activar visita " + ex);
 
         }
     }
