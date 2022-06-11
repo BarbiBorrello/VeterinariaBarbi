@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package CONTROLADOR;
 
 import java.sql.Connection;
@@ -20,10 +15,6 @@ import javax.swing.JOptionPane;
 import MODELO.Cliente;
 import MODELO.Mascota;
 
-/**
- *
- * @author Barbara
- */
 public class MascotaData {
 
     private Connection con = null;
@@ -94,21 +85,19 @@ public class MascotaData {
 
             if (rs.next()) {
 
+                mascota = new Mascota();
+                mascota.setId_mascota(rs.getInt("id_mascota"));
+                mascota.setAlias(rs.getString("alias"));
+                mascota.setSexo(rs.getString("sexo"));
+                mascota.setEspecie(rs.getString("especie"));
+                mascota.setRaza(rs.getString("raza"));
+                mascota.setColor_pelaje(rs.getString("color_pelaje"));
+                mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
+                mascota.setPeso_actual(rs.getDouble("peso_actual"));
+                mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
+                mascota.setActivo(rs.getBoolean("activo"));
 
-                    mascota = new Mascota();
-                    mascota.setId_mascota(rs.getInt("id_mascota"));
-                    mascota.setAlias(rs.getString("alias"));
-                    mascota.setSexo(rs.getString("sexo"));
-                    mascota.setEspecie(rs.getString("especie"));
-                    mascota.setRaza(rs.getString("raza"));
-                    mascota.setColor_pelaje(rs.getString("color_pelaje"));
-                    mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
-                    mascota.setPeso_actual(rs.getDouble("peso_actual"));
-                    mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
-                    mascota.setActivo(rs.getBoolean("activo"));
-
-                    JOptionPane.showMessageDialog(null, "Mascota encrontrada exitosamente :" + " " + mascota.getAlias());
-   
+                JOptionPane.showMessageDialog(null, "Mascota encrontrada exitosamente :" + " " + mascota.getAlias());
 
             } else {
                 JOptionPane.showMessageDialog(null, "Mascota inexistente");
@@ -122,11 +111,10 @@ public class MascotaData {
         return mascota;
     }
 
-
-
 // buscar mascota por nombre //
-    public Mascota buscarMascotaxALIAS(String p_alias) {
+    public List<Mascota> buscarMascotaxALIAS(String p_alias) {
 
+        ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
         Mascota mascota = null;
 
         String sql = "SELECT * FROM  mascota  WHERE  activo =1 AND  alias LIKE ? ";
@@ -134,11 +122,11 @@ public class MascotaData {
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
-            ps.setString(1, p_alias);
+            ps.setString(1, "%" + p_alias + "%");
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.wasNull() == false) {
+            if (rs.isBeforeFirst() ) {
 
                 while (rs.next()) {
 
@@ -154,8 +142,8 @@ public class MascotaData {
                     mascota.setPeso_actual(rs.getDouble("peso_actual"));
                     mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
                     mascota.setActivo(rs.getBoolean("activo"));
-
-                    JOptionPane.showMessageDialog(null, "Mascota encontrada exitosamente  " + " Paciente n° : " + mascota.getId_mascota());
+                    mascotas.add(mascota);
+                    JOptionPane.showMessageDialog(null, "Mascota encontrada exitosamente  " + " Paciente N° : " + mascota.getId_mascota());
                 }
 
             } else {
@@ -166,13 +154,13 @@ public class MascotaData {
         } catch (SQLException ex) {
             Logger.getLogger(MascotaData.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return mascota;
+        return mascotas;
     }
 
     public void modificarMascota(int p_id_mascota, Mascota p_mascota) {
 
         // String de consulta a base de datos
-        String sql = "UPDATE mascota SET alias = ?, sexo = ?, especie = ?, raza = ?, color_pelaje = ?, fecha_nac = ?, peso_actual = ?, id_cliente = ? , peso_promedio = ?, activo = ?";
+        String sql = "UPDATE mascota SET alias = ?, sexo = ?, especie = ?, raza = ?, color_pelaje = ?, fecha_nac = ?, peso_actual = ?, id_cliente = ? , peso_promedio = ?, activo = ? WHERE id_mascota=?";
 
         try {
 
@@ -188,7 +176,7 @@ public class MascotaData {
             ps.setObject(8, p_mascota.getCliente().getId_cliente());
             ps.setDouble(9, p_mascota.getPeso_promedio());
             ps.setInt(10, p_mascota.isActivo() ? 1 : 0);
-
+            ps.setInt(11, p_id_mascota);
             int rs = ps.executeUpdate();
 
             if (rs > 0) {
@@ -342,9 +330,9 @@ public class MascotaData {
 
         return promedio;
     }
-    
-   public void actualizarPesoPromedio(int p_id_mascota, double p_pesoPromedio){
-               String sql = "UPDATE mascota SET peso_promedio = ? WHERE id_mascota=?";
+
+    public void actualizarPesoPromedio(int p_id_mascota, double p_pesoPromedio) {
+        String sql = "UPDATE mascota SET peso_promedio = ? WHERE id_mascota=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setDouble(1, p_pesoPromedio);
@@ -362,18 +350,18 @@ public class MascotaData {
             JOptionPane.showMessageDialog(null, "Error de conexion al actualizar el peso promedio de Mascota " + ex);
 
         }
-   }
- 
-  public List<Mascota> obtenerEspecies(String p_especie){
-        
-      ArrayList<Mascota> especies = new ArrayList<Mascota>();
-                Mascota especie = null;
+    }
+
+    public List<Mascota> obtenerEspecies(String p_especie) {
+
+        ArrayList<Mascota> especies = new ArrayList<Mascota>();
+        Mascota especie = null;
         try {
             String sql = "SELECT * FROM mascota WHERE especie LIKE ?";
-          
+
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1,"%"+ p_especie+"%");
-            
+            ps.setString(1, "%" + p_especie + "%");
+
             ResultSet rs = ps.executeQuery();
 
             Mascota mascota;
@@ -394,8 +382,6 @@ public class MascotaData {
                 mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
                 mascota.setActivo(rs.getBoolean("activo"));
 
-
-
                 especies.add(mascota);
             }
             ps.close();
@@ -405,6 +391,5 @@ public class MascotaData {
 
         return especies;
     }
-  
-    
+
 }

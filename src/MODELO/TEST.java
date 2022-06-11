@@ -14,7 +14,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class TEST {
 
     public static void main(String[] args) {
@@ -109,27 +108,38 @@ public class TEST {
 // Metodo: MASCOTA_Buscar por id de mascota //------------------------------------------------------------------------
 // Mascota  existente en la base // 
 //
-//md.buscarMascotaActiva(2);
-//md.buscarMascotaActiva(3);
-//md.buscarMascotaActiva(4);
+//md.buscarMascota(2);
+//md.buscarMascota(3);
+//md.buscarMascota(4);
 // Mascota  inexistente en la base //
 //md.buscarMascota(23);
 //md.buscarMascota(45);
 //md.buscarMascota(109);
 // Metodo: MASCOTA_Buscar por Alias  //------------------------------------------------------------------------
-// Mascota  existente en la base // 
-//md.buscarMascotaxALIAS("Pablo");
-//md.buscarMascotaxALIAS("Fran");
-// Mascota  inexistente en la base // 
-            md.buscarMascotaxALIAS("Josecito");
-            md.buscarMascotaxALIAS("Martita");
+// Mascotas  existente en la base // 
+//            List<Mascota> mascotas1 = md.buscarMascotaxALIAS("Pablo");
+//            for (Mascota m : mascotas1) {
+//                System.out.println(m.toString());
+//            }
+            
+// Mascotas con la letra en su nombre
+//            List<Mascota> mascotas2 = md.buscarMascotaxALIAS("b");
+//            for (Mascota m : mascotas1) {
+//                System.out.println(m.toString());
+//            }
+            
+// Mascotas  inexistente en la base // 
+//            List<Mascota> mascotas3 = md.buscarMascotaxALIAS("Luna");
+//            for (Mascota m : mascotas2) {
+//                System.out.println(m.toString());
+//            }
 
 // Metodo: MASCOTA_modificar   //------------------------------------------------------------------------
 // Mascota  existente en la base //
-//Mascota mascota2 = new Mascota("Lola", "hembra", "perro", "shitsu", "blanco", LocalDate.of(2015,6, 23), 7, 7.5, true, cd.buscarCliente(5));
+//Mascota mascota2 = new Mascota("Lola", "Macho", "perro", "shitsu", "blanco", LocalDate.of(2015,6, 23), 7, 7.5, true, cd.buscarCliente(5));
 //md.modificarMascota(2, mascota2);
 // Mascota  inexistente en la base //
-//md.modificarMascota(2, mascota32);
+//md.modificarMascota(22165, mascota2);
 // Metodo: MASCOTA_borrar   //------------------------------------------------------------------------
 // Mascota  existente en la base //
 //md.borrarMascota(7);
@@ -141,7 +151,7 @@ public class TEST {
 // Mascota  inexistente en la base //
 //md.activarMascota(45);
 // Metodo: MASCOTA_obtener listado   //------------------------------------------------------------------------
-//ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+
 // lista vacia //
 //            
 //List<Mascota> mascotas = md.obtenerMascotas();
@@ -173,33 +183,32 @@ for (Mascota m : mascotasG){
 //confirma?
 //carga exitosa OK //   
 // Metodo: TRATAMIENTO_ buscarTratamiento Activo / ------------------------------------------------------------
-
-
-/***** Agregar tratamiento *****/
-            
+            /**
+             * *** Agregar tratamiento ****
+             */
 //Tratamiento tratamiento1 = new Tratamiento ("Vacunacion"," se aplica una dosis","antirrabica",1900,true);
 //Tratamiento tratamiento4 = new Tratamiento ("Curaciones","ataque de jabali","antibiticos / analgesicos ",3500,true);
 //td.agregar_Tratamiento(tratamiento4);
-            
-
-/***** Se modifica el tratamiento 6, para probar el metodo modificar y ademas sera utilizado mas adelante *****/
-
+            /**
+             * *** Se modifica el tratamiento 6, para probar el metodo modificar
+             * y ademas sera utilizado mas adelante ****
+             */
 //para que sea inactivo en la prueba de busqueda
 //Tratamiento existente
 //Tratamiento tratamiento6 = new Tratamiento ("Castracion","tamaño medio: se retiran solo ovarios","material quirurjico y analgesico",6700,false);
 //td.modificarTratamiento(6, tratamiento6);
 //Tratamiento inexistente
 //td.modificarTratamiento(80, tratamiento6);
-
-
-/***** Borrar tratamiento con id existente e inexistente *****/
+            /**
+             * *** Borrar tratamiento con id existente e inexistente ****
+             */
 //Tratamiento existente
 //td.borrarTratamiento(1);
 //Tratamiento inexistente
 //td.borrarTratamiento(564);
-
-
-/***** Buscar tratamientos Activo e inactivos *****/
+            /**
+             * *** Buscar tratamientos Activo e inactivos ****
+             */
 // Buscar tratamiento activo existente
 //td.buscarTratamientoActivo(0);
 // Buscar tratamiento activo inexistente
@@ -207,18 +216,18 @@ for (Mascota m : mascotasG){
 // Buscar tratamiento inactivo existente
 //td.buscarTratamientoInactivo(6);
 // Buscar tratamiento inactivo inexistente
-
-
-/***** Activar Tratamiento *****/
+            /**
+             * *** Activar Tratamiento ****
+             */
 //Se reactiva el tratamiento con id 6
 //td.activarTratamiento(6);
 //Se intenta activar un tratamiento inexistente
 //td.activarTratamiento(5646);
+            /**
+             * *** Listado de tratamientos ****
+             */
 
-
-/***** Listado de tratamientos *****/
-
-/*
+            /*
 List <Tratamiento> listaTratamientos = td.obtenerTratamientos();
 
 for (Tratamiento lt : listaTratamientos){
@@ -226,53 +235,49 @@ for (Tratamiento lt : listaTratamientos){
     System.out.println(lt.toString());
     
 }
-*/
-            
-            
+             */
 //----------------------------------VISITA DATA-------------------------------//
-/***** Agregar visita *****/
+            /**
+             * *** Agregar visita ****
+             */
 
-/*
+            /*
 Tratamiento tratamientoVisita = td.buscarTratamientoActivo(1);
 Mascota mascotaVisita = md.buscarMascota(2);
 Visita visita1 = new Visita(LocalDate.now(), 50, true, mascotaVisita, tratamientoVisita);
 vd.agregarVisita(visita1);
-*/
-
-            
-/****** Borrar Visita *****/
-
+             */
+            /**
+             * **** Borrar Visita ****
+             */
 //Borrar visita existente
 //vd.borrarVisita(1);
 //Borrar visita inexistente
 //vd.borrarVisita(15234);
-
-
-/****** Activar Visita *****/
-
+            /**
+             * **** Activar Visita ****
+             */
 //Activar visita existente
 //vd.activarVisita(1);
 //Activar visita inexistente
 //vd.activarVisita(56156);
-
-
-/****** Desactivar Visita *****/
-
+            /**
+             * **** Desactivar Visita ****
+             */
 //Desactivar visita existente
 //vd.desactivarVisita(1);
 //Desactivar visita inexistente
 //vd.desactivarVisita(54665);
-
-
-/****** Buscar Visita *****/
-
+            /**
+             * **** Buscar Visita ****
+             */
 // Buscar una visita existente
 //vd.buscarVisita(2);
 // Buscar una visita inexistente
 //vd.buscarVisita(23156);
-
-
-/***** Modificar Visita *****/
+            /**
+             * *** Modificar Visita ****
+             */
 //Modificacion de un id existente
 //Cargo una visita para tener como objeto, desde la base de datos
 //Visita visitaModif = vd.buscarVisita(2);
@@ -280,7 +285,6 @@ vd.agregarVisita(visita1);
 //visitaModif.setPeso(30);
 // Aplico la modificacion
 //vd.modificarVisita(2, visitaModif);
-
 //Modificacion de un id inexistente
 //Cargo una visita para tener como objeto, desde la base de datos
 //Visita visitaModif1 = vd.buscarVisita(2);
@@ -288,8 +292,6 @@ vd.agregarVisita(visita1);
 //visitaModif1.setPeso(30);
 // Aplico la modificacion
 //vd.modificarVisita(2346, visitaModif1);
-
-
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(TEST.class.getName()).log(Level.SEVERE, null, ex);
         }
