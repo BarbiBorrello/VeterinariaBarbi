@@ -73,7 +73,7 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 580, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 580, 10));
 
         jlGUARDAR.setText("GUARDAR");
         jlGUARDAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -197,7 +197,7 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 350, 70));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\buscar.png")); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 70, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 60, 50));
 
         jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\fondo_CLIENTE.png")); // NOI18N
         jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
