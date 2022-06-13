@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author Barbara
  */
-public class Menu_VETE2 extends javax.swing.JFrame {
+public class Menu_PRINCIPAL_VETE2 extends javax.swing.JFrame {
     
     Conexion conexion = null;
     private ClienteData cd;
@@ -32,7 +32,7 @@ public class Menu_VETE2 extends javax.swing.JFrame {
     /**
      * Creates new form Menu_VETE2
      */
-    public Menu_VETE2() {
+    public Menu_PRINCIPAL_VETE2() {
 
         try {
             this.conexion = new Conexion();
@@ -88,6 +88,7 @@ public class Menu_VETE2 extends javax.swing.JFrame {
     private void initComponents() {
 
         escritorio = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuPrincipal = new javax.swing.JMenuBar();
         jM_CLIENTES = new javax.swing.JMenu();
         jM_FICHA_CLIENTE = new javax.swing.JMenuItem();
@@ -105,15 +106,18 @@ public class Menu_VETE2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Barbara\\Desktop\\fondo _menu.png")); // NOI18N
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jM_CLIENTES.setText("Clientes");
@@ -185,7 +189,7 @@ public class Menu_VETE2 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -220,20 +224,21 @@ public class Menu_VETE2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_VETE2().setVisible(true);
+                new Menu_PRINCIPAL_VETE2().setVisible(true);
             }
         });
     }
@@ -241,6 +246,7 @@ public class Menu_VETE2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel escritorio;
     private javax.swing.JMenu jConsultas;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMConsultasCLIENTES;
     private javax.swing.JMenuItem jMConsultasMASCOTAS;
     private javax.swing.JMenuItem jMConsultasTRATAMIENTOS;

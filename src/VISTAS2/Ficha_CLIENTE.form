@@ -19,51 +19,65 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
-              <Component id="jLabel16" min="-2" pref="200" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="141" max="32767" attributes="0"/>
-              <Component id="jLabel14" min="-2" pref="359" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="jSeparator2" min="-2" pref="194" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jlCLIENTE_NUMERO" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jTextField6" min="-2" pref="180" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jbBUSCAR" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel14" min="-2" pref="491" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="199" max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="80" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                      <Component id="jlMASCOTAS_DE_CLIENTES" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jSeparator1" min="-2" pref="630" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                      <Component id="jbGUARDAR" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jbACTUALIZAR" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jbBORRAR" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jbLIMPIAR" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="80" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jSeparator1" min="-2" pref="630" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
-                          <Component id="jButton6" min="-2" pref="70" max="-2" attributes="0"/>
-                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                          <Component id="jButton5" min="-2" pref="80" max="-2" attributes="0"/>
-                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="80" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" pref="120" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jSeparator2" min="-2" pref="600" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="300" pref="300" max="-2" attributes="0"/>
-                                  <Component id="jTextField6" min="-2" pref="180" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jlDNI" min="-2" pref="70" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                                   <Component id="jTextField3" min="-2" pref="90" max="-2" attributes="0"/>
@@ -75,7 +89,7 @@
                                   <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                                   <Component id="jTextField4" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel6" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jlAPELLIDO" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -83,32 +97,32 @@
                                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                                   <Component id="jTextField5" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel2" min="-2" pref="70" max="-2" attributes="0"/>
+                              <Component id="jlNOMBRE" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="jlDIRECCION" min="-2" pref="120" max="-2" attributes="0"/>
                           <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                           <Component id="jTextField9" min="-2" pref="410" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel11" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="jlTELEFONO" min="-2" pref="70" max="-2" attributes="0"/>
                           <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
                           <Component id="jTextField10" min="-2" pref="410" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlCONTACTO_ALTERNATIVO" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
                           <Component id="jTextField7" min="-2" pref="410" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="190" pref="190" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" min="-2" pref="93" max="-2" attributes="0"/>
+                          <Component id="jrbC_ACTIVO" min="-2" pref="93" max="-2" attributes="0"/>
                           <EmptySpace min="97" pref="97" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbC_INACTIVO" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
@@ -120,7 +134,7 @@
                       </Group>
                       <Component id="jSeparator5" min="-2" pref="590" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="205" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -128,63 +142,74 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel14" min="-2" pref="20" max="-2" attributes="0"/>
-              <EmptySpace pref="365" max="32767" attributes="0"/>
-              <Component id="jLabel16" min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel1" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jLabel14" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jbBORRAR" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbLIMPIAR" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbGUARDAR" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbACTUALIZAR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="jbBUSCAR" min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <Component id="jSeparator2" min="-2" pref="51" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="jlCLIENTE_NUMERO" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextField6" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="135" max="32767" attributes="0"/>
+              <Component id="jlMASCOTAS_DE_CLIENTES" min="-2" pref="20" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
-                  <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="190" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jSeparator2" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="jTextField6" min="-2" pref="30" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlDNI" min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlAPELLIDO" min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jTextField5" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlNOMBRE" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel9" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlDIRECCION" min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jTextField9" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel11" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlTELEFONO" min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jTextField10" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel10" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jlCONTACTO_ALTERNATIVO" min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbC_ACTIVO" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbC_INACTIVO" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
                   <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
@@ -196,14 +221,14 @@
                           <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jlCLIENTE_NUMERO">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tw Cen MT" size="24" style="1"/>
@@ -216,19 +241,19 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jlNOMBRE">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nombre"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="jlDNI">
       <Properties>
         <Property name="text" type="java.lang.String" value="DNI"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField3">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="jlAPELLIDO">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apellido"/>
       </Properties>
@@ -239,24 +264,24 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField6">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
+    <Component class="javax.swing.JLabel" name="jlDIRECCION">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Direcion"/>
+        <Property name="text" type="java.lang.String" value="Direccion"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField7">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="jlCONTACTO_ALTERNATIVO">
       <Properties>
         <Property name="text" type="java.lang.String" value="Contacto Alternativo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="jrbC_ACTIVO">
       <Properties>
         <Property name="text" type="java.lang.String" value="Activo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="jrbC_INACTIVO">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inactivo"/>
       </Properties>
@@ -266,17 +291,17 @@
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="jbGUARDAR">
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="jbACTUALIZAR">
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="jbBORRAR">
       <Properties>
         <Property name="text" type="java.lang.String" value="Borrar"/>
       </Properties>
@@ -306,14 +331,14 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField9">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="jlTELEFONO">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefono"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField10">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
+    <Component class="javax.swing.JLabel" name="jlMASCOTAS_DE_CLIENTES">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Bookman Old Style" size="18" style="1"/>
@@ -321,7 +346,7 @@
         <Property name="text" type="java.lang.String" value="Mascotas a su cargo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="jbBUSCAR">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
@@ -335,9 +360,19 @@
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bookman Old Style" size="18" style="1"/>
+          <Font name="Bookman Old Style" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  FICHA DEL CLIENTE: Datos Basicos"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbLIMPIAR">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limpiar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
   </SubComponents>
