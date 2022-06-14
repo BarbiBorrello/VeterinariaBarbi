@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author Barbara
  */
-public class Menu_PRINCIPAL_VETE2 extends javax.swing.JFrame {
+public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     
     Conexion conexion = null;
     private ClienteData cd;
@@ -32,7 +32,7 @@ public class Menu_PRINCIPAL_VETE2 extends javax.swing.JFrame {
     /**
      * Creates new form Menu_VETE2
      */
-    public Menu_PRINCIPAL_VETE2() {
+    public Menu_PRINCIPAL_VETERINARIA() {
 
         try {
             this.conexion = new Conexion();
@@ -120,7 +120,7 @@ public class Menu_PRINCIPAL_VETE2 extends javax.swing.JFrame {
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(escritorioLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -228,21 +228,23 @@ public class Menu_PRINCIPAL_VETE2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETERINARIA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETERINARIA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETERINARIA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETE2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_PRINCIPAL_VETERINARIA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_PRINCIPAL_VETE2().setVisible(true);
+                new Menu_PRINCIPAL_VETERINARIA().setVisible(true);
             }
         });
     }
