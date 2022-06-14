@@ -178,9 +178,9 @@ public class Ficha_TRATAMIENTOS extends javax.swing.JInternalFrame {
         jltexto_Contacto_Alternativo1.setOpaque(true);
         jPanel1.add(jltexto_Contacto_Alternativo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 70, 20));
 
-        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\fondo_TRATAMIENTO.png")); // NOI18N
+        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Consultas_TRATAMIENTOS.png"))); // NOI18N
         jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 630, 460));
+        jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 470));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
