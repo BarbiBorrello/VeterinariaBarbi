@@ -254,7 +254,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\Mascotas\\descarga.jpg")); // NOI18N
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 220, 110));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 220, 110));
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Fallecido");
