@@ -31,11 +31,6 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        jlGUARDAR = new javax.swing.JLabel();
-        jlACTUALIZAR = new javax.swing.JLabel();
-        jlBORRAR = new javax.swing.JLabel();
-        jlLIMPIAR = new javax.swing.JLabel();
-        jlSALIR = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jlDNI = new javax.swing.JLabel();
         jltexto_dni = new javax.swing.JLabel();
@@ -79,26 +74,6 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 580, 10));
-
-        jlGUARDAR.setText("GUARDAR");
-        jlGUARDAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, 30));
-
-        jlACTUALIZAR.setText("ACTUALIZAR");
-        jlACTUALIZAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 60, 30));
-
-        jlBORRAR.setText("BORRAR");
-        jlBORRAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlBORRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 50, 30));
-
-        jlLIMPIAR.setText("LIMPIAR");
-        jlLIMPIAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 50, 30));
-
-        jlSALIR.setText("SALIR");
-        jlSALIR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 40, 30));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 580, 10));
 
         jlDNI.setBackground(new java.awt.Color(255, 255, 255));
@@ -263,17 +238,12 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JLabel jlACTUALIZAR;
     private javax.swing.JLabel jlAPELLIDO2;
-    private javax.swing.JLabel jlBORRAR;
     private javax.swing.JLabel jlCONTACTO_ALTERNATIVO;
     private javax.swing.JLabel jlDIRECCION1;
     private javax.swing.JLabel jlDNI;
-    private javax.swing.JLabel jlGUARDAR;
-    private javax.swing.JLabel jlLIMPIAR;
     private javax.swing.JLabel jlNOMBRE;
     private javax.swing.JLabel jlN_DE_CLIENTE;
-    private javax.swing.JLabel jlSALIR;
     private javax.swing.JLabel jlTELEFONO1;
     private javax.swing.JLabel jltexto_Apellido2;
     private javax.swing.JLabel jltexto_Contacto_Alternativo;
