@@ -57,6 +57,11 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jFondo_CLIENTE = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -77,23 +82,23 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
 
         jlGUARDAR.setText("GUARDAR");
         jlGUARDAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, 30));
+        jPanel1.add(jlGUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, 30));
 
         jlACTUALIZAR.setText("ACTUALIZAR");
         jlACTUALIZAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 60, 30));
+        jPanel1.add(jlACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 60, 30));
 
         jlBORRAR.setText("BORRAR");
         jlBORRAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlBORRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 50, 30));
+        jPanel1.add(jlBORRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 50, 30));
 
         jlLIMPIAR.setText("LIMPIAR");
         jlLIMPIAR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 50, 30));
+        jPanel1.add(jlLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 50, 30));
 
         jlSALIR.setText("SALIR");
         jlSALIR.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel1.add(jlSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 40, 30));
+        jPanel1.add(jlSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 40, 30));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 580, 10));
 
         jlDNI.setBackground(new java.awt.Color(255, 255, 255));
@@ -196,10 +201,31 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 350, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\buscar.png")); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 60, 50));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 60, 50));
 
-        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\fondo_CLIENTE.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/add.png"))); // NOI18N
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 60, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/delete.png"))); // NOI18N
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 60, 50));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/edit.png"))); // NOI18N
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 60, 50));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search.png"))); // NOI18N
+        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 60, 50));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/clear.png"))); // NOI18N
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 60, 50));
+
+        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_CLIENTE.png"))); // NOI18N
         jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 630, 460));
 
@@ -224,6 +250,11 @@ public class Ficha_CLIENTE2 extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jFondo_CLIENTE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
