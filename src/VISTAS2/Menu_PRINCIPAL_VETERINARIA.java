@@ -87,7 +87,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        escritorio = new javax.swing.JPanel();
+        escritorio = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jMenuPrincipal = new javax.swing.JMenuBar();
         jM_CLIENTES = new javax.swing.JMenu();
@@ -106,25 +106,32 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\fondo _menu.png")); // NOI18N
-        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        escritorio.setBackground(new java.awt.Color(102, 0, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo _menu.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        escritorio.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(escritorioLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 628, Short.MAX_VALUE)
+                .addContainerGap())
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(escritorioLayout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jM_CLIENTES.setText("Clientes");
+        jM_CLIENTES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_CLIENTESActionPerformed(evt);
+            }
+        });
 
         jM_FICHA_CLIENTE.setText("Ficha CLIENTE");
         jM_FICHA_CLIENTE.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +144,11 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         jMenuPrincipal.add(jM_CLIENTES);
 
         jM_MASCOTAS.setText("Mascotas");
+        jM_MASCOTAS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_MASCOTASActionPerformed(evt);
+            }
+        });
 
         jM_FICHA_MASCOTA.setText("Ficha MASCOTA");
         jM_FICHA_MASCOTA.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +163,11 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         jM_TRATAMIENTOS.setText("Tratamientos");
 
         jM_FICHA_TRATAMIENTOS.setText("Ficha TRATAMIENTO");
+        jM_FICHA_TRATAMIENTOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_FICHA_TRATAMIENTOSActionPerformed(evt);
+            }
+        });
         jM_TRATAMIENTOS.add(jM_FICHA_TRATAMIENTOS);
 
         jMenuPrincipal.add(jM_TRATAMIENTOS);
@@ -158,6 +175,11 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         jM_VISITAS.setText("Visitas");
 
         jM_FICHA_VISITAS.setText("Ficha VISITAS");
+        jM_FICHA_VISITAS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jM_FICHA_VISITASActionPerformed(evt);
+            }
+        });
         jM_VISITAS.add(jM_FICHA_VISITAS);
 
         jMenuPrincipal.add(jM_VISITAS);
@@ -165,6 +187,11 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         jConsultas.setText("Consultas");
 
         jMConsultasCLIENTES.setText("Consultas de Clientes");
+        jMConsultasCLIENTES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMConsultasCLIENTESActionPerformed(evt);
+            }
+        });
         jConsultas.add(jMConsultasCLIENTES);
 
         jMConsultasMASCOTAS.setText("Consulta de Mascotas");
@@ -176,9 +203,19 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         jConsultas.add(jMConsultasMASCOTAS);
 
         jMConsultasTRATAMIENTOS.setText("Consulta de Tratamientos");
+        jMConsultasTRATAMIENTOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMConsultasTRATAMIENTOSActionPerformed(evt);
+            }
+        });
         jConsultas.add(jMConsultasTRATAMIENTOS);
 
         jMConsultasVISITAS.setText("Consulta de Visitas");
+        jMConsultasVISITAS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMConsultasVISITASActionPerformed(evt);
+            }
+        });
         jConsultas.add(jMConsultasVISITAS);
 
         jMenuPrincipal.add(jConsultas);
@@ -189,11 +226,13 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(escritorio, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -201,15 +240,125 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
 
     private void jM_FICHA_CLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_FICHA_CLIENTEActionPerformed
         // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Ficha_CLIENTE agregar;
+        agregar = new Ficha_CLIENTE();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
     }//GEN-LAST:event_jM_FICHA_CLIENTEActionPerformed
 
     private void jMConsultasMASCOTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasMASCOTASActionPerformed
         // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Consultas_MASCOTAS agregar;
+        agregar = new Consultas_MASCOTAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        
+        
     }//GEN-LAST:event_jMConsultasMASCOTASActionPerformed
 
     private void jM_FICHA_MASCOTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_FICHA_MASCOTAActionPerformed
         // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Ficha_MASCOTA agregar ;
+        agregar = new Ficha_MASCOTA();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
     }//GEN-LAST:event_jM_FICHA_MASCOTAActionPerformed
+
+    private void jM_CLIENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_CLIENTESActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+ 
+    }//GEN-LAST:event_jM_CLIENTESActionPerformed
+
+    private void jM_MASCOTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_MASCOTASActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+    }//GEN-LAST:event_jM_MASCOTASActionPerformed
+
+    private void jM_FICHA_TRATAMIENTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_FICHA_TRATAMIENTOSActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Ficha_TRATAMIENTOS agregar ;
+        agregar = new Ficha_TRATAMIENTOS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        
+        
+        
+        escritorio.removeAll();
+    }//GEN-LAST:event_jM_FICHA_TRATAMIENTOSActionPerformed
+
+    private void jM_FICHA_VISITASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_FICHA_VISITASActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Ficha_VISITAS agregar;
+        agregar = new Ficha_VISITAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        
+        
+        escritorio.removeAll();
+    }//GEN-LAST:event_jM_FICHA_VISITASActionPerformed
+
+    private void jMConsultasCLIENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasCLIENTESActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        Consultas_CLIENTES agregar;
+        agregar = new Consultas_CLIENTES();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        escritorio.removeAll();
+    }//GEN-LAST:event_jMConsultasCLIENTESActionPerformed
+
+    private void jMConsultasTRATAMIENTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasTRATAMIENTOSActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Consultas_TRATAMIENTOS agregar;
+        agregar = new Consultas_TRATAMIENTOS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        escritorio.removeAll();
+        
+       
+    }//GEN-LAST:event_jMConsultasTRATAMIENTOSActionPerformed
+
+    private void jMConsultasVISITASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasVISITASActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        Consultas_VISITAS agregar;
+        agregar = new Consultas_VISITAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+        escritorio.removeAll();
+    }//GEN-LAST:event_jMConsultasVISITASActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,7 +399,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel escritorio;
+    private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jConsultas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMConsultasCLIENTES;
@@ -268,3 +417,4 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }
+

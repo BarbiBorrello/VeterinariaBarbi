@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import MODELO.Cliente;
 import MODELO.Mascota;
+import java.time.Period;
 
 public class MascotaData {
 
@@ -391,5 +392,17 @@ public class MascotaData {
 
         return especies;
     }
+    
+    // Calcula Edad en años y meses  si es menor a 1 año en meses y en años si mayor//
+    public String calcularEdad(LocalDate fecha_nac) {
+        int edad = 0;
+        LocalDate fecha_actual = LocalDate.now();
+        edad = Period.between(fecha_nac, fecha_actual).getYears();
+        if (edad > 1) {
+            return edad + " años";
+        } else {
+            return edad + " meses";
+        }
 
+    }
 }
