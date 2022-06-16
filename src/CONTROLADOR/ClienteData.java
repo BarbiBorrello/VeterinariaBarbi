@@ -137,17 +137,7 @@ public class ClienteData {
             } else {
                 // Mensaje de cliente no encontrado
                 JOptionPane.showMessageDialog(null, " Cliente inexistente");
-     
- // opcion de cargar un nuevo cliente//
- 
-                String[] options = {"Si", "No"};
 
-                int x = JOptionPane.showOptionDialog(null, "¿Desea agregar un nuevo cliente?",
-                        "Selecciona una opcion",
-                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
-                return x == 0;
-              
-                //agregar desde la vista opcion agregar_cliente
             }
             ps.close();
         } catch (SQLException ex) {

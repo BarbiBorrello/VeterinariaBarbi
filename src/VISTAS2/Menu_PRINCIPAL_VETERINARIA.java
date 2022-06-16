@@ -290,9 +290,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         escritorio.add(agregar);
         escritorio.repaint();
         escritorio.moveToFront(agregar);
-        
-        
-        
+              
         
     }//GEN-LAST:event_jM_FICHA_TRATAMIENTOSActionPerformed
 
@@ -388,9 +386,87 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    
+    // METODOS LLAMAR A UNA VISTA DESDE OTRAS VISTAS //
+    
+    
+    public static void mostrarFichaCliente() {
+        Ficha_CLIENTE agregar;
+        agregar = new Ficha_CLIENTE();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+    
+    
+        public static void mostrarFichaMascota() {
+        Ficha_MASCOTA agregar;
+        agregar = new Ficha_MASCOTA();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        public static void mostrarFichaTratamientos() {
+        Ficha_TRATAMIENTOS agregar;
+        agregar = new Ficha_TRATAMIENTOS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        public static void mostrarFichaVisitas() {
+        Ficha_VISITAS agregar;
+        agregar = new Ficha_VISITAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        
+        public static void mostrarConsultasClientes() {
+        Consultas_CLIENTES agregar;
+        agregar = new Consultas_CLIENTES();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        public static void mostrarConsultasMascotas() {
+        Consultas_MASCOTAS agregar;
+        agregar = new Consultas_MASCOTAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        public static void mostrarConsultasTratamientos() {
+        Consultas_TRATAMIENTOS agregar;
+        agregar = new Consultas_TRATAMIENTOS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+        
+        public static void mostrarConsultasVisitas() {
+        Consultas_VISITAS agregar;
+        agregar = new Consultas_VISITAS();
+        agregar.setVisible(true);
+        escritorio.add(agregar);
+        escritorio.repaint();
+        escritorio.moveToFront(agregar);
+    }
+//------------------------------------------------------------------------------------------------------------------
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane escritorio;
+    public static javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jConsultas;
     private javax.swing.JMenuItem jMConsultasCLIENTES;
     private javax.swing.JMenuItem jMConsultasMASCOTAS;
