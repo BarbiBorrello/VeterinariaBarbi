@@ -110,7 +110,9 @@ public class ClienteData {
 
         // String de consulta a base de datos
         String sql = "SELECT * FROM cliente WHERE activo = 1 AND dni =?;";
-
+ 
+        
+        
         try {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, (int) p_dni);
@@ -130,11 +132,21 @@ public class ClienteData {
                 cliente.setActivo(rs.getBoolean("activo"));
 
                 // Mensaje de cliente encontrado
-                JOptionPane.showMessageDialog(null, cliente.getApellido() + " " + cliente.getNombreD());
+                JOptionPane.showMessageDialog(null,"Cliente existente :"+" "+cliente.getApellido() + " " + cliente.getNombreD());
 
             } else {
                 // Mensaje de cliente no encontrado
-                JOptionPane.showMessageDialog(null, " dni inexistente");
+                JOptionPane.showMessageDialog(null, " Cliente inexistente");
+     
+ // opcion de cargar un nuevo cliente//
+ 
+                String[] options = {"Si", "No"};
+
+                int x = JOptionPane.showOptionDialog(null, "¿Desea agregar un nuevo cliente?",
+                        "Selecciona una opcion",
+                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+                return x == 0;
+              
                 //agregar desde la vista opcion agregar_cliente
             }
             ps.close();

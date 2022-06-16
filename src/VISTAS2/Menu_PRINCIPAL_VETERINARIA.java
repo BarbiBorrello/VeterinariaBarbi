@@ -10,7 +10,6 @@ import CONTROLADOR.Conexion;
 import CONTROLADOR.MascotaData;
 import CONTROLADOR.TratamientoData;
 import CONTROLADOR.VisitaData;
-import VISTAS.MenuPrincipal_VETE;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -22,10 +21,10 @@ import javax.swing.JOptionPane;
 public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     
     Conexion conexion = null;
-    private ClienteData cd;
-    private MascotaData md;
-    private TratamientoData td;
-    private VisitaData vd;
+    public static ClienteData cd;
+    public static MascotaData md;
+    public static TratamientoData td;
+    public static VisitaData vd;
     
     
 
@@ -37,7 +36,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         try {
             this.conexion = new Conexion();
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(MenuPrincipal_VETE.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Menu_PRINCIPAL_VETERINARIA.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.cd = new ClienteData(conexion);
         this.md = new MascotaData(conexion);
@@ -88,7 +87,6 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     private void initComponents() {
 
         escritorio = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
         jMenuPrincipal = new javax.swing.JMenuBar();
         jM_CLIENTES = new javax.swing.JMenu();
         jM_FICHA_CLIENTE = new javax.swing.JMenuItem();
@@ -108,22 +106,15 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
 
         escritorio.setBackground(new java.awt.Color(102, 0, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo _menu.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        escritorio.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(escritorioLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 628, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 638, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 459, Short.MAX_VALUE)
         );
 
         jM_CLIENTES.setText("Clientes");
@@ -302,7 +293,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         
         
         
-        escritorio.removeAll();
+        
     }//GEN-LAST:event_jM_FICHA_TRATAMIENTOSActionPerformed
 
     private void jM_FICHA_VISITASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jM_FICHA_VISITASActionPerformed
@@ -317,7 +308,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         escritorio.moveToFront(agregar);
         
         
-        escritorio.removeAll();
+        
     }//GEN-LAST:event_jM_FICHA_VISITASActionPerformed
 
     private void jMConsultasCLIENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasCLIENTESActionPerformed
@@ -329,7 +320,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         escritorio.add(agregar);
         escritorio.repaint();
         escritorio.moveToFront(agregar);
-        escritorio.removeAll();
+       
     }//GEN-LAST:event_jMConsultasCLIENTESActionPerformed
 
     private void jMConsultasTRATAMIENTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConsultasTRATAMIENTOSActionPerformed
@@ -342,7 +333,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         escritorio.add(agregar);
         escritorio.repaint();
         escritorio.moveToFront(agregar);
-        escritorio.removeAll();
+      
         
        
     }//GEN-LAST:event_jMConsultasTRATAMIENTOSActionPerformed
@@ -357,7 +348,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         escritorio.add(agregar);
         escritorio.repaint();
         escritorio.moveToFront(agregar);
-        escritorio.removeAll();
+        
     }//GEN-LAST:event_jMConsultasVISITASActionPerformed
 
     /**
@@ -401,7 +392,6 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jConsultas;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMConsultasCLIENTES;
     private javax.swing.JMenuItem jMConsultasMASCOTAS;
     private javax.swing.JMenuItem jMConsultasTRATAMIENTOS;
