@@ -308,7 +308,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
     private void jcbTratamientos_VActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTratamientos_VActionPerformed
         // TODO add your handling code here:
-//        jlprecio_V.setText(Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem())).getPrecio());
+        jlprecio_V.setText(Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem()).getPrecio()));
         
         
     }//GEN-LAST:event_jcbTratamientos_VActionPerformed
