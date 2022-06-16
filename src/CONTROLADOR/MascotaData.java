@@ -114,9 +114,8 @@ public class MascotaData {
 
    // buscar mascotas por cliente // 
     
-    public List <Mascota> buscarMascotas_x_Cliente( Cliente p_cliente) {
+    public List<Mascota> buscarMascotas_x_Cliente(Cliente p_cliente) {
 
-        
         ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
         Mascota mascota = null;
 
@@ -128,34 +127,36 @@ public class MascotaData {
 
             ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
+            if (rs.isBeforeFirst()) {
 
-                mascota = new Mascota();
-                mascota.setId_mascota(rs.getInt("id_mascota"));
-                mascota.setAlias(rs.getString("alias"));
-                mascota.setSexo(rs.getString("sexo"));
-                mascota.setEspecie(rs.getString("especie"));
-                mascota.setRaza(rs.getString("raza"));
-                mascota.setColor_pelaje(rs.getString("color_pelaje"));
-                mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
-                mascota.setPeso_actual(rs.getDouble("peso_actual"));
-                mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
-                mascota.setActivo(rs.getBoolean("activo"));
-                mascotas.add(mascota);
+                while (rs.next()) {
 
-                JOptionPane.showMessageDialog(null, "Mascota encrontrada exitosamente :" + " " + mascota.getAlias());
+                    mascota = new Mascota();
+                    mascota.setId_mascota(rs.getInt("id_mascota"));
+                    mascota.setAlias(rs.getString("alias"));
+                    mascota.setSexo(rs.getString("sexo"));
+                    mascota.setEspecie(rs.getString("especie"));
+                    mascota.setRaza(rs.getString("raza"));
+                    mascota.setColor_pelaje(rs.getString("color_pelaje"));
+                    mascota.setFecha_nac(rs.getDate("fecha_nac").toLocalDate());
+                    mascota.setPeso_actual(rs.getDouble("peso_actual"));
+                    mascota.setPeso_promedio(rs.getDouble("peso_promedio"));
+                    mascota.setActivo(rs.getBoolean("activo"));
+                    mascotas.add(mascota);
 
-            } else {
-                JOptionPane.showMessageDialog(null, "Mascota inexistente");
-            }
-            ps.close();
+                    JOptionPane.showMessageDialog(null, "Mascota encrontrada exitosamente :" + " " + mascota.getAlias());
+                }
+            }else {
+                    JOptionPane.showMessageDialog(null, "Mascota inexistente");
+                }
+                ps.close();
 
-        } catch (SQLException ex) {
+            }catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, " Error de conexion desde buscar mascota " + ex);
         }
 
-        return mascotas;
-    }
+            return mascotas;
+        }
 
 // buscar mascota por nombre //
     public List<Mascota> buscarMascotaxALIAS(String p_alias) {
