@@ -42,7 +42,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
         this.md = new MascotaData(conexion);
         this.td = new TratamientoData(conexion);
         this.vd = new VisitaData(conexion);
-        setLocationRelativeTo(null);
+         //setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -53,36 +53,7 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     
-//    private boolean revisarCamposVaciosClientes() {
-//        if (jTextDNI.getText().isEmpty()) {
-//            jTextDNI.requestFocus();
-//            JOptionPane.showMessageDialog(null, "DNI no puede estar vacio");
-//            return false;
-//        } else if (jTextApellido.getText().isEmpty()) {
-//            jTextApellido.requestFocus();
-//            JOptionPane.showMessageDialog(null, "Apellido no puede estar vacio");
-//            return false;
-//        } else if (jTextNombre.getText().isEmpty()) {
-//            jTextNombre.requestFocus();
-//            JOptionPane.showMessageDialog(null, "Nombre no puede estar vacio");
-//            return false;
-//        } else if (jTextDireccion.getText().isEmpty()) {
-//            jTextDireccion.requestFocus();
-//            JOptionPane.showMessageDialog(null, "Direccion no puede estar vacia");
-//            return false;
-//        } else if (jTextTelefono.getText().isEmpty()) {
-//            jTextTelefono.requestFocus();
-//            JOptionPane.showMessageDialog(null, "Telefono no puede estar vacio");
-//            return false;
-//        } else if (jTextContactoA.getText().isEmpty()) {
-//            jTextContactoA.requestFocus();
-//            JOptionPane.showMessageDialog(null, "Contacto alternativo no puede estar vacio");
-//            return false;
-//        } else {
-//            return true;
-//        }
-//
-//    }
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
