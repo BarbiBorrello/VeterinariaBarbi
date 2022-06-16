@@ -8,10 +8,16 @@ package VISTAS2;
 import MODELO.Cliente;
 import MODELO.Mascota;
 import MODELO.Tratamiento;
+import MODELO.Visita;
 import static VISTAS2.Menu_PRINCIPAL_VETERINARIA.escritorio;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -43,19 +49,29 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel(){
+
+            String str="/IMAGENES/fondo_VISITAS.png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(str));
+            Image image = icon.getImage();
+
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
+            }
+
+        }
+        ;
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jlFecha_V = new javax.swing.JLabel();
-        jlN_DE_CLIENTE = new javax.swing.JLabel();
-        jltexto_peso_V = new javax.swing.JLabel();
+        jlN_DE_VISITA = new javax.swing.JLabel();
         jlPrecio_V = new javax.swing.JLabel();
         jlprecio_V = new javax.swing.JLabel();
         jlMascota_V = new javax.swing.JLabel();
         jlDuenio = new javax.swing.JLabel();
-        jlDiagnostico = new javax.swing.JLabel();
+        jlSintomas = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jltexto_id_visita = new javax.swing.JLabel();
         jrbACTIVO = new javax.swing.JRadioButton();
         jlUtima_Visita = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -68,14 +84,13 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jtDNI_duenio_V = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jlDETALLES_diagnostico = new javax.swing.JLabel();
         jlPeso_V = new javax.swing.JLabel();
         jcbTratamientos_V = new javax.swing.JComboBox<>();
         jdcFechaV = new com.toedter.calendar.JDateChooser();
-        jFondo_CLIENTE = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
+        jtfPeso = new javax.swing.JTextField();
+        jtfSintomas = new javax.swing.JTextField();
+        jtID_VISITA = new javax.swing.JTextField();
+        jlGUARDAR_VISITA = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -92,6 +107,8 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        setResizable(true);
+
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 630, 10));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 610, 10));
@@ -102,17 +119,11 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jlFecha_V.setText("Fecha :");
         jPanel1.add(jlFecha_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        jlN_DE_CLIENTE.setBackground(new java.awt.Color(255, 255, 255));
-        jlN_DE_CLIENTE.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlN_DE_CLIENTE.setForeground(new java.awt.Color(255, 255, 255));
-        jlN_DE_CLIENTE.setText("Visita N° :");
-        jPanel1.add(jlN_DE_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
-
-        jltexto_peso_V.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_peso_V.setForeground(new java.awt.Color(255, 255, 255));
-        jltexto_peso_V.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_peso_V.setOpaque(true);
-        jPanel1.add(jltexto_peso_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 70, 20));
+        jlN_DE_VISITA.setBackground(new java.awt.Color(255, 255, 255));
+        jlN_DE_VISITA.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jlN_DE_VISITA.setForeground(new java.awt.Color(255, 255, 255));
+        jlN_DE_VISITA.setText("Visita N° :");
+        jPanel1.add(jlN_DE_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
         jlPrecio_V.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jlPrecio_V.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,6 +132,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
         jlprecio_V.setBackground(new java.awt.Color(255, 255, 255));
         jlprecio_V.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jlprecio_V.setEnabled(false);
         jlprecio_V.setOpaque(true);
         jPanel1.add(jlprecio_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 80, 20));
 
@@ -134,17 +146,11 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jlDuenio.setText("Dueño:");
         jPanel1.add(jlDuenio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 70, 20));
 
-        jlDiagnostico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlDiagnostico.setForeground(new java.awt.Color(255, 255, 255));
-        jlDiagnostico.setText("Sintomas:");
-        jPanel1.add(jlDiagnostico, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 70, 20));
+        jlSintomas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jlSintomas.setForeground(new java.awt.Color(255, 255, 255));
+        jlSintomas.setText("Sintomas:");
+        jPanel1.add(jlSintomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 70, 20));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 590, 10));
-
-        jltexto_id_visita.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_id_visita.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_id_visita.setEnabled(false);
-        jltexto_id_visita.setOpaque(true);
-        jPanel1.add(jltexto_id_visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 60, 20));
 
         jrbACTIVO.setBackground(new java.awt.Color(255, 255, 255));
         jrbACTIVO.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -187,6 +193,11 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
         jLIMPIAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/clear.png"))); // NOI18N
         jLIMPIAR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLIMPIAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLIMPIARMouseClicked(evt);
+            }
+        });
         jPanel1.add(jLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 60, 50));
 
         jlTratamiento_V.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -205,11 +216,6 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 570, 10));
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 570, 10));
 
-        jlDETALLES_diagnostico.setBackground(new java.awt.Color(255, 255, 255));
-        jlDETALLES_diagnostico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jlDETALLES_diagnostico.setOpaque(true);
-        jPanel1.add(jlDETALLES_diagnostico, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 300, 40));
-
         jlPeso_V.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlPeso_V.setForeground(new java.awt.Color(255, 255, 255));
         jlPeso_V.setText("Peso:");
@@ -222,25 +228,37 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jcbTratamientos_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 220, -1));
+
+        jdcFechaV.setEnabled(false);
         jPanel1.add(jdcFechaV, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 140, -1));
 
-        jFondo_CLIENTE.setBackground(new java.awt.Color(255, 255, 255));
-        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_VISITAS.png"))); // NOI18N
-        jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jFondo_CLIENTE.setOpaque(true);
-        jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 630, -1));
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        jtfPeso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtfPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfPesoActionPerformed(evt);
+            }
         });
-        jScrollPane3.setViewportView(jList1);
+        jPanel1.add(jtfPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 70, 20));
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 190, -1));
+        jtfSintomas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtfSintomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfSintomasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jtfSintomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 280, 40));
 
-        jLabel1.setText("GUARDAR ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, -1, -1));
+        jtID_VISITA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtID_VISITA.setEnabled(false);
+        jPanel1.add(jtID_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 70, 20));
+
+        jlGUARDAR_VISITA.setText("GUARDAR ");
+        jlGUARDAR_VISITA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlGUARDAR_VISITAMouseClicked(evt);
+            }
+        });
+        jPanel1.add(jlGUARDAR_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -308,11 +326,99 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
     private void jcbTratamientos_VActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTratamientos_VActionPerformed
         // TODO add your handling code here:
-        jlprecio_V.setText(Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem()).getPrecio()));
+        // devuelve el precio de cada tratamiento en label : precio //
+        jlprecio_V.setText("$"+Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem()).getPrecio()));
         
         
     }//GEN-LAST:event_jcbTratamientos_VActionPerformed
-    // metodo: trae todos los tratmientos activos //
+
+    private void jtfPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPesoActionPerformed
+        // TODO add your handling code here:
+        
+      // cargar peso a mano//
+    }//GEN-LAST:event_jtfPesoActionPerformed
+
+    private void jtfSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSintomasActionPerformed
+        // TODO add your handling code here:
+        
+        // cargar sintomas //
+    }//GEN-LAST:event_jtfSintomasActionPerformed
+
+    private void jlGUARDAR_VISITAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlGUARDAR_VISITAMouseClicked
+        // TODO add your handling code here:
+        
+        Visita v = new Visita();
+        
+ // FECHA DE LA VISITA//       
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+
+        String fecha = formato.format(jdcFechaV.getDate()); // FORMATO: date de jcalendar a string//
+
+        DateTimeFormatter formato2 = DateTimeFormatter.ofPattern("dd-MM-yyyy"); // FORMATO: de string a localDate//
+
+        LocalDate FechaV = LocalDate.parse(fecha, formato2);
+        
+        v.setFecha_visita(FechaV);
+//---------------------------------------------------------------------------------------------------------------------        
+ 
+//PESO //
+
+        Double peso = Double.parseDouble(jtfPeso.getText());
+        v.setPeso(peso);
+      
+//---------------------------------------------------------------------------------------------------------------------        
+// ESTADO //-------------------------------------------------------------------------------------------------------------        
+        
+      v.setActivo(true);
+        
+//-------------------------------------------------------------------------------------------------------------------------        
+// MASCOTA -----------------------------------------------------------------------------------------------------------------        
+
+    Mascota m = (Mascota) jcMascotaV.getSelectedItem();
+//  retorna la mascota que hizo la visita //
+
+    v.setMascota(m);
+// se agrega mascota a la visita //
+
+//TRATAMIENTO--------------------------------------------------------------------------------------------------------------
+    
+    Tratamiento t = (Tratamiento) jcbTratamientos_V.getSelectedItem();
+    
+    v.setTratamiento(t);
+//--------------------------------------------------------------------------------------------------------------------------
+
+    Menu_PRINCIPAL_VETERINARIA.vd.agregarVisita(v);
+    jrbACTIVO.setSelected(v.isActivo()); // esta activo?//
+    jtID_VISITA.setText(Integer.toString(v.getIdvisita())); // completa el id de visita //
+    
+        
+    }//GEN-LAST:event_jlGUARDAR_VISITAMouseClicked
+
+    private void jLIMPIARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLIMPIARMouseClicked
+        // TODO add your handling code here:
+        
+     limpiar();   
+        
+        
+        
+        
+    }//GEN-LAST:event_jLIMPIARMouseClicked
+   
+   private void limpiar(){
+       
+       jtDNI_duenio_V.setText("");
+       jcMascotaV.removeAllItems(); // comboBox//
+       jcbTratamientos_V.removeAllItems(); 
+       jrbACTIVO.setSelected(false);
+       jtfPeso.setText("");
+       jtfSintomas.setText("");
+       
+       
+   }
+
+
+
+// metodo: trae todos los tratmientos activos //
 
     public void Tratamientos_Visita() {
 
@@ -335,14 +441,10 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jFondo_CLIENTE;
     private javax.swing.JLabel jLIMPIAR;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -353,22 +455,23 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<Mascota> jcMascotaV;
     private javax.swing.JComboBox<Tratamiento> jcbTratamientos_V;
     private com.toedter.calendar.JDateChooser jdcFechaV;
-    private javax.swing.JLabel jlDETALLES_diagnostico;
-    private javax.swing.JLabel jlDiagnostico;
     private javax.swing.JLabel jlDuenio;
     private javax.swing.JLabel jlFecha_V;
+    private javax.swing.JLabel jlGUARDAR_VISITA;
     private javax.swing.JLabel jlMascota_V;
-    private javax.swing.JLabel jlN_DE_CLIENTE;
+    private javax.swing.JLabel jlN_DE_VISITA;
     private javax.swing.JLabel jlPeso_V;
     private javax.swing.JLabel jlPrecio_V;
     private javax.swing.JLabel jlSALIR;
+    private javax.swing.JLabel jlSintomas;
     private javax.swing.JLabel jlTratamiento_V;
     private javax.swing.JLabel jlUtima_Visita;
     private javax.swing.JLabel jlprecio_V;
-    private javax.swing.JLabel jltexto_id_visita;
-    private javax.swing.JLabel jltexto_peso_V;
     private javax.swing.JRadioButton jrbACTIVO;
     private javax.swing.JTextField jtDNI_duenio_V;
+    private javax.swing.JTextField jtID_VISITA;
     private javax.swing.JTable jtableUltima_Visita;
+    private javax.swing.JTextField jtfPeso;
+    private javax.swing.JTextField jtfSintomas;
     // End of variables declaration//GEN-END:variables
 }
