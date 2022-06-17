@@ -180,7 +180,12 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
         jlSALIR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
         jlSALIR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jlSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, 60, 50));
+        jlSALIR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlSALIRMouseClicked(evt);
+            }
+        });
+        jPanel1.add(jlSALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 60, 50));
 
         jbuscarClienteV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search.png"))); // NOI18N
         jbuscarClienteV.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -198,7 +203,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
                 jLIMPIARMouseClicked(evt);
             }
         });
-        jPanel1.add(jLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 60, 50));
+        jPanel1.add(jLIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 60, 50));
 
         jlTratamiento_V.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlTratamiento_V.setForeground(new java.awt.Color(255, 255, 255));
@@ -232,13 +237,15 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jdcFechaV.setEnabled(false);
         jPanel1.add(jdcFechaV, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 140, -1));
 
+        jtfPeso.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtfPeso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jtfPeso.setMargin(new java.awt.Insets(2, 5, 2, 5));
         jtfPeso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfPesoActionPerformed(evt);
             }
         });
-        jPanel1.add(jtfPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 70, 20));
+        jPanel1.add(jtfPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 70, 20));
 
         jtfSintomas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jtfSintomas.addActionListener(new java.awt.event.ActionListener() {
@@ -252,13 +259,15 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jtID_VISITA.setEnabled(false);
         jPanel1.add(jtID_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 70, 20));
 
-        jlGUARDAR_VISITA.setText("GUARDAR ");
+        jlGUARDAR_VISITA.setIcon(new javax.swing.ImageIcon("C:\\Users\\Barbara\\Desktop\\GUARDAR_VISITA_ICONO.png")); // NOI18N
+        jlGUARDAR_VISITA.setText(" ");
+        jlGUARDAR_VISITA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlGUARDAR_VISITA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jlGUARDAR_VISITAMouseClicked(evt);
             }
         });
-        jPanel1.add(jlGUARDAR_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, -1, -1));
+        jPanel1.add(jlGUARDAR_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 50, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -403,12 +412,17 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         
         
     }//GEN-LAST:event_jLIMPIARMouseClicked
+
+    private void jlSALIRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSALIRMouseClicked
+        // TODO add your handling code here:
+        
+        dispose();
+    }//GEN-LAST:event_jlSALIRMouseClicked
    
    private void limpiar(){
        
        jtDNI_duenio_V.setText("");
        jcMascotaV.removeAllItems(); // comboBox//
-       jcbTratamientos_V.removeAllItems(); 
        jrbACTIVO.setSelected(false);
        jtfPeso.setText("");
        jtfSintomas.setText("");
