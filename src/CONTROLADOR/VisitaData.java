@@ -23,6 +23,8 @@ import MODELO.Visita;
 import java.sql.Time;
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -232,4 +234,48 @@ public class VisitaData {
 
         }
     }
+    
+    
+    public List<Visita> buscarVisitaxFecha(Mascota p_mascota) {
+
+        ArrayList<Visita> visitas = new ArrayList<Visita>();
+        Visita visita = null;
+
+        String sql = "SELECT * FROM  visita  WHERE  id_mascota  = ? ORDER BY fecha_visita  DESC;";
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, p_mascota.getId_mascota());
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.isBeforeFirst()) {
+
+                while (rs.next()) {
+
+                    visita = new Visita();
+                    
+                    visita.setIdvisita(rs.getInt("id_visita"));
+                    visita.setFecha_visita(rs.getDate("fecha_visita").toLocalDate());
+                    visita.setPeso(rs.getDouble("peso"));
+                    visita.setActivo(rs.getBoolean("activo"));
+                    //visita.setMascota((Mascota)md.buscarMascota(rs.getInt("id_mascota")));
+                    visita.setMascota(p_mascota);
+                    visita.setTratamiento(td.buscarTratamientoActivo(rs.getInt("id_tratamiento")));
+                    
+                    visitas.add(visita);
+
+                    
+                }
+            }else {
+                    JOptionPane.showMessageDialog(null, "No se registran visitas ");
+                }
+                ps.close();
+
+            }catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, " Error de conexion desde buscar mascota " + ex);
+        }
+
+            return visitas;
+        }
 }

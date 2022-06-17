@@ -12,6 +12,7 @@ import CONTROLADOR.Conexion;
 import CONTROLADOR.MascotaData;
 import CONTROLADOR.TratamientoData;
 import CONTROLADOR.VisitaData;
+import java.util.List;
 
 public class Veterianaria_Test_Main_F {
 
@@ -40,8 +41,16 @@ public class Veterianaria_Test_Main_F {
             // Buscar tratamiento inactivo inexistente
             Eliminar esta linea para chequear busqueda de tratamientos Activo e inactivos -A*/
             
+           Mascota m1 = md.buscarMascota(5);
+           
+           List <Visita> listarVisitas = vd.buscarVisitaxFecha(m1);
             
-            cd.buscarClientexDNI(9530545);
+           for (Visita v1 : listarVisitas ){
+               System.out.println(v1.toString());
+           }
+
+
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Veterianaria_Test_Main_F.class.getName()).log(Level.SEVERE, null, ex);
         }
