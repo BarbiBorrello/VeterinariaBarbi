@@ -75,17 +75,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jLabel9 = new javax.swing.JLabel(){
-            String str="/IMAGENES/fondo _menu.png";
-            ImageIcon icon = new ImageIcon(getClass().getResource(str));
-            Image image = icon.getImage();
-
-            public void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
-            }
-
-        };
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -289,9 +278,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 100, 20));
 
-        jLabel9.setText("jLabel9");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 80, 80));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -338,7 +324,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

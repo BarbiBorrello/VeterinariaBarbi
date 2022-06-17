@@ -155,7 +155,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JDesktopPane(){&#xa;&#xa;&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JDesktopPane(){&#xa;String str=&quot;/IMAGENES/fondo _menu.png&quot;;&#xa;    ImageIcon icon = new ImageIcon(getClass().getResource(str));&#xa;    Image image = icon.getImage();&#xa;&#xa;    public void paintComponent(Graphics g) {&#xa;        super.paintComponent(g);&#xa;        g.drawImage(image, 0, 0,getWidth(),getHeight(), this);&#xa;    }&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
 

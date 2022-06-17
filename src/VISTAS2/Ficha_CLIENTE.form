@@ -56,6 +56,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    String str=&quot;/IMAGENES/fondo_cliente.png&quot;;&#xa;    ImageIcon icon = new ImageIcon(getClass().getResource(str));&#xa;    Image image = icon.getImage();&#xa;&#xa;    public void paintComponent(Graphics g) {&#xa;        super.paintComponent(g);&#xa;        g.drawImage(image, 0, 0,getWidth(),getHeight(), this);&#xa;    }&#xa;}"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>

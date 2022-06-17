@@ -5,6 +5,10 @@
  */
 package VISTAS2;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Barbara
@@ -32,7 +36,16 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel(){
+            String str="/IMAGENES/fondo_cliente.png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(str));
+            Image image = icon.getImage();
+
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
+            }
+        };
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jlDNI = new javax.swing.JLabel();

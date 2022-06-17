@@ -69,7 +69,14 @@ public class Menu_PRINCIPAL_VETERINARIA extends javax.swing.JFrame {
     private void initComponents() {
 
         escritorio = new javax.swing.JDesktopPane(){
+            String str="/IMAGENES/fondo _menu.png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(str));
+            Image image = icon.getImage();
 
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
+            }
         };
         jMenuPrincipal = new javax.swing.JMenuBar();
         jM_CLIENTES = new javax.swing.JMenu();
