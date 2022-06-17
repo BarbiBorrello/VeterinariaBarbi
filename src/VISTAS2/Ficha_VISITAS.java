@@ -34,6 +34,9 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
         Tratamientos_Visita(); // inicializa con listado de tratamientos activos
         fechaVisita();         // inicializa con le fecha de hoy  
+        
+        // inicio la funcion de validacion de campos para el formulario
+        validacionDeCampos();
 
     }
 
@@ -91,6 +94,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jtfSintomas = new javax.swing.JTextField();
         jtID_VISITA = new javax.swing.JTextField();
         jlGUARDAR_VISITA = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -217,6 +221,12 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jcMascotaV, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 190, -1));
+
+        jtDNI_duenio_V.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtDNI_duenio_VKeyTyped(evt);
+            }
+        });
         jPanel1.add(jtDNI_duenio_V, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, -1));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 570, 10));
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 570, 10));
@@ -259,7 +269,6 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jtID_VISITA.setEnabled(false);
         jPanel1.add(jtID_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 70, 20));
 
-        jlGUARDAR_VISITA.setIcon(new javax.swing.ImageIcon("C:\\Users\\Barbara\\Desktop\\GUARDAR_VISITA_ICONO.png")); // NOI18N
         jlGUARDAR_VISITA.setText(" ");
         jlGUARDAR_VISITA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jlGUARDAR_VISITA.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -268,6 +277,9 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jlGUARDAR_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 50, 50));
+
+        jFormattedTextField1.setText("jFormattedTextField1");
+        jPanel1.add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -279,55 +291,64 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void validacionDeCampos() {
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SNumero(jtDNI_duenio_V);
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SDouble(jtfPeso);
+    }
     private void jcMascotaVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcMascotaVActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcMascotaVActionPerformed
 
     private void jbuscarClienteVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbuscarClienteVMouseClicked
 
-        // con el DNI del cliente busco al cliente //
-        Cliente c = Menu_PRINCIPAL_VETERINARIA.cd.buscarClientexDNI(Long.parseLong(jtDNI_duenio_V.getText()));
+        if (!jtDNI_duenio_V.getText().isEmpty()) {
+            // con el DNI del cliente busco al cliente //
+            Cliente c = Menu_PRINCIPAL_VETERINARIA.cd.buscarClientexDNI(Long.parseLong(jtDNI_duenio_V.getText()));
 
-//  opcion de cargar un nuevo cliente//
-        if (c == null) {
-            // si el dni no existe //   
+//  opcion de cargar un nuevo cliente //
+            if (c == null) {
+                // si el dni no existe //   
 
-            String[] options = {"Si", "No"};
+                String[] options = {"Si", "No"};
 
-            int x = JOptionPane.showOptionDialog(null, "¿Desea agregar un nuevo cliente?",
-                    "Selecciona una opcion",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+                int x = JOptionPane.showOptionDialog(null, "¿Desea agregar un nuevo cliente?",
+                        "Selecciona una opcion",
+                        JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 
-            //si //
-            if (x == 0) {
+                //si //
+                if (x == 0) {
 
-                escritorio.removeAll();
-                Menu_PRINCIPAL_VETERINARIA.mostrarFichaCliente();
+                    escritorio.removeAll();
+                    Menu_PRINCIPAL_VETERINARIA.mostrarFichaCliente();
 
 // lleva el usuario a la ficha del cliente para que lo agregue a la base de datos //
 // si elige "NO"  se limpia para nueva carga de visita //
-            } else {
-                jtDNI_duenio_V.setText("");
+                } else {
+                    jtDNI_duenio_V.setText("");
+                }
+
+            } // si el cliente existe , verificar que tenga mascota activa //
+            else {
+                // Lista a todas la mascotas de ese cliente //
+                List<Mascota> m = Menu_PRINCIPAL_VETERINARIA.md.buscarMascotas_x_Cliente(c);
+
+                jcMascotaV.removeAllItems(); //borra datos anteriores //
+
+                for (Mascota m1 : m) {
+
+                    jcMascotaV.addItem(m1);
+                }
+
             }
-
-        } // si el cliente existe , verificar que tenga mascota activa //
-        else {
-            // Lista a todas la mascotas de ese cliente //
-            List<Mascota> m = Menu_PRINCIPAL_VETERINARIA.md.buscarMascotas_x_Cliente(c);
-
-            jcMascotaV.removeAllItems(); //borra datos anteriores //
-
-            for (Mascota m1 : m) {
-
-                jcMascotaV.addItem(m1);
-            }
-
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor coloque un DNI");
+            jtDNI_duenio_V.requestFocus();
         }
 
 
@@ -336,29 +357,29 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
     private void jcbTratamientos_VActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTratamientos_VActionPerformed
         // TODO add your handling code here:
         // devuelve el precio de cada tratamiento en label : precio //
-        jlprecio_V.setText("$"+Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem()).getPrecio()));
-        
-        
+        jlprecio_V.setText("$" + Double.toString(((Tratamiento) jcbTratamientos_V.getSelectedItem()).getPrecio()));
+
+
     }//GEN-LAST:event_jcbTratamientos_VActionPerformed
 
     private void jtfPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPesoActionPerformed
         // TODO add your handling code here:
-        
-      // cargar peso a mano//
+
+        // cargar peso a mano//
     }//GEN-LAST:event_jtfPesoActionPerformed
 
     private void jtfSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSintomasActionPerformed
         // TODO add your handling code here:
-        
+
         // cargar sintomas //
     }//GEN-LAST:event_jtfSintomasActionPerformed
 
     private void jlGUARDAR_VISITAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlGUARDAR_VISITAMouseClicked
         // TODO add your handling code here:
-        
+
         Visita v = new Visita();
-        
- // FECHA DE LA VISITA//       
+
+        // FECHA DE LA VISITA//       
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
 
         String fecha = formato.format(jdcFechaV.getDate()); // FORMATO: date de jcalendar a string//
@@ -366,74 +387,68 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         DateTimeFormatter formato2 = DateTimeFormatter.ofPattern("dd-MM-yyyy"); // FORMATO: de string a localDate//
 
         LocalDate FechaV = LocalDate.parse(fecha, formato2);
-        
+
         v.setFecha_visita(FechaV);
 //---------------------------------------------------------------------------------------------------------------------        
- 
-//PESO //
 
+//PESO //
         Double peso = Double.parseDouble(jtfPeso.getText());
         v.setPeso(peso);
-      
+
 //---------------------------------------------------------------------------------------------------------------------        
 // ESTADO //-------------------------------------------------------------------------------------------------------------        
-        
-      v.setActivo(true);
-        
+        v.setActivo(true);
+
 //-------------------------------------------------------------------------------------------------------------------------        
 // MASCOTA -----------------------------------------------------------------------------------------------------------------        
-
-    Mascota m = (Mascota) jcMascotaV.getSelectedItem();
+        Mascota m = (Mascota) jcMascotaV.getSelectedItem();
 //  retorna la mascota que hizo la visita //
 
-    v.setMascota(m);
+        v.setMascota(m);
 // se agrega mascota a la visita //
 
 //TRATAMIENTO--------------------------------------------------------------------------------------------------------------
-    
-    Tratamiento t = (Tratamiento) jcbTratamientos_V.getSelectedItem();
-    
-    v.setTratamiento(t);
+        Tratamiento t = (Tratamiento) jcbTratamientos_V.getSelectedItem();
+
+        v.setTratamiento(t);
 //--------------------------------------------------------------------------------------------------------------------------
 
-    Menu_PRINCIPAL_VETERINARIA.vd.agregarVisita(v);
-    jrbACTIVO.setSelected(v.isActivo()); // esta activo?//
-    jtID_VISITA.setText(Integer.toString(v.getIdvisita())); // completa el id de visita //
-    
-        
+        Menu_PRINCIPAL_VETERINARIA.vd.agregarVisita(v);
+        jrbACTIVO.setSelected(v.isActivo()); // esta activo?//
+        jtID_VISITA.setText(Integer.toString(v.getIdvisita())); // completa el id de visita //
+
+
     }//GEN-LAST:event_jlGUARDAR_VISITAMouseClicked
 
     private void jLIMPIARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLIMPIARMouseClicked
         // TODO add your handling code here:
-        
-     limpiar();   
-        
-        
-        
-        
+
+        limpiar();
+
+
     }//GEN-LAST:event_jLIMPIARMouseClicked
 
     private void jlSALIRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSALIRMouseClicked
         // TODO add your handling code here:
-        
+
         dispose();
     }//GEN-LAST:event_jlSALIRMouseClicked
-   
-   private void limpiar(){
-       
-       jtDNI_duenio_V.setText("");
-       jcMascotaV.removeAllItems(); // comboBox//
-       jrbACTIVO.setSelected(false);
-       jtfPeso.setText("");
-       jtfSintomas.setText("");
-       
-       
-   }
 
+    private void jtDNI_duenio_VKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtDNI_duenio_VKeyTyped
 
+    }//GEN-LAST:event_jtDNI_duenio_VKeyTyped
+
+    private void limpiar() {
+
+        jtDNI_duenio_V.setText("");
+        jcMascotaV.removeAllItems(); // comboBox//
+        jrbACTIVO.setSelected(false);
+        jtfPeso.setText("");
+        jtfSintomas.setText("");
+
+    }
 
 // metodo: trae todos los tratmientos activos //
-
     public void Tratamientos_Visita() {
 
         List<Tratamiento> t = Menu_PRINCIPAL_VETERINARIA.td.obtenerTratamientos();
@@ -455,6 +470,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLIMPIAR;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

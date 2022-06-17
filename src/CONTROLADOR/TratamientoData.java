@@ -81,9 +81,8 @@ public class TratamientoData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, p_id_tratamiento);
 
-            
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
 
                 tratamiento = new Tratamiento();
@@ -98,7 +97,7 @@ public class TratamientoData {
                 JOptionPane.showMessageDialog(null, "Tratamiento encrontrado exitosamente :" + " " + tratamiento.getTipo_tratamiento());
 
             } else {
-                
+
                 JOptionPane.showMessageDialog(null, "Tratamiento activo inexistente");
 
             }
@@ -123,9 +122,8 @@ public class TratamientoData {
             PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, p_id_tratamiento);
 
-            
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
 
                 tratamiento = new Tratamiento();
@@ -140,7 +138,7 @@ public class TratamientoData {
                 JOptionPane.showMessageDialog(null, "Tratamiento encrontrado exitosamente :" + " " + tratamiento.getTipo_tratamiento());
 
             } else {
-                
+
                 JOptionPane.showMessageDialog(null, "Tratamiento inactivo inexistente");
 
             }
@@ -172,7 +170,7 @@ public class TratamientoData {
             int rs = ps.executeUpdate();
 
             if (rs > 0) {
-                JOptionPane.showMessageDialog(null, " Tratamiento con ID: "+p_id_tratamiento+" actualizado exitosamente ");
+                JOptionPane.showMessageDialog(null, " Tratamiento con ID: " + p_id_tratamiento + " actualizado exitosamente ");
             } else {
                 JOptionPane.showMessageDialog(null, " El tratamiento no existe, no se actualizo");
             }
@@ -219,7 +217,7 @@ public class TratamientoData {
             int rs = ps.executeUpdate();
 
             if (rs > 0) {
-                JOptionPane.showMessageDialog(null, "Se activo el estado del tratamiento con ID:"+p_id_tratamiento);
+                JOptionPane.showMessageDialog(null, "Se activo el estado del tratamiento con ID:" + p_id_tratamiento);
             } else {
                 JOptionPane.showMessageDialog(null, " El id del tratamiento no existe ");
             }

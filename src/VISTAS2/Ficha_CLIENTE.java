@@ -16,6 +16,9 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
      */
     public Ficha_CLIENTE() {
         initComponents();
+
+        // inicio la funcion de validacion de campos para el formulario
+        validacionDeCampos();
     }
 
     /**
@@ -33,20 +36,14 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jlDNI = new javax.swing.JLabel();
-        jltexto_dni = new javax.swing.JLabel();
         jlN_DE_CLIENTE = new javax.swing.JLabel();
         jltexto_n_cliente = new javax.swing.JLabel();
         jlNOMBRE = new javax.swing.JLabel();
-        jltexto_Nombre = new javax.swing.JLabel();
         jlCONTACTO_ALTERNATIVO = new javax.swing.JLabel();
-        jltexto_Contacto_Alternativo = new javax.swing.JLabel();
         jlAPELLIDO2 = new javax.swing.JLabel();
-        jltexto_Apellido2 = new javax.swing.JLabel();
         jlDIRECCION1 = new javax.swing.JLabel();
-        jltexto_Direccion1 = new javax.swing.JLabel();
         jlTELEFONO1 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jltexto_Telefono1 = new javax.swing.JLabel();
         jrbACTIVO = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -58,8 +55,13 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
-        jFondo_CLIENTE = new javax.swing.JLabel();
+        jltexto_dni = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        jtexto_Apellido = new javax.swing.JTextField();
+        jtexto_Nombre = new javax.swing.JTextField();
+        jtexto_Direccion = new javax.swing.JTextField();
+        jtexto_ContactoA = new javax.swing.JTextField();
+        jtexto_Telefono = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,11 +86,6 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jlDNI.setText("DNI :");
         jPanel1.add(jlDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
 
-        jltexto_dni.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_dni.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_dni.setOpaque(true);
-        jPanel1.add(jltexto_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 100, 20));
-
         jlN_DE_CLIENTE.setBackground(new java.awt.Color(255, 255, 255));
         jlN_DE_CLIENTE.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jlN_DE_CLIENTE.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,51 +103,26 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jlNOMBRE.setText("Nombre: ");
         jPanel1.add(jlNOMBRE, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 70, 20));
 
-        jltexto_Nombre.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_Nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_Nombre.setOpaque(true);
-        jPanel1.add(jltexto_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 210, 20));
-
         jlCONTACTO_ALTERNATIVO.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlCONTACTO_ALTERNATIVO.setForeground(new java.awt.Color(255, 255, 255));
         jlCONTACTO_ALTERNATIVO.setText("Contacto Alternativo: ");
         jPanel1.add(jlCONTACTO_ALTERNATIVO, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 160, 20));
-
-        jltexto_Contacto_Alternativo.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_Contacto_Alternativo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_Contacto_Alternativo.setOpaque(true);
-        jPanel1.add(jltexto_Contacto_Alternativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 310, 20));
 
         jlAPELLIDO2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlAPELLIDO2.setForeground(new java.awt.Color(255, 255, 255));
         jlAPELLIDO2.setText("Apellido: ");
         jPanel1.add(jlAPELLIDO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 70, 20));
 
-        jltexto_Apellido2.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_Apellido2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_Apellido2.setOpaque(true);
-        jPanel1.add(jltexto_Apellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 210, 20));
-
         jlDIRECCION1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlDIRECCION1.setForeground(new java.awt.Color(255, 255, 255));
         jlDIRECCION1.setText("Direccion:");
         jPanel1.add(jlDIRECCION1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 70, 20));
-
-        jltexto_Direccion1.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_Direccion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_Direccion1.setOpaque(true);
-        jPanel1.add(jltexto_Direccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 210, 20));
 
         jlTELEFONO1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlTELEFONO1.setForeground(new java.awt.Color(255, 255, 255));
         jlTELEFONO1.setText("Telefono:");
         jPanel1.add(jlTELEFONO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 70, 20));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 590, 20));
-
-        jltexto_Telefono1.setBackground(new java.awt.Color(255, 255, 255));
-        jltexto_Telefono1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jltexto_Telefono1.setOpaque(true);
-        jPanel1.add(jltexto_Telefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 210, 20));
 
         jrbACTIVO.setBackground(new java.awt.Color(255, 255, 255));
         jrbACTIVO.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -202,33 +174,43 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jLabel8.setText("Agregar Mascota");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 30));
 
-        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_CLIENTE.png"))); // NOI18N
-        jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 630, 460));
+        jltexto_dni.setText("jTextField1");
+        jPanel1.add(jltexto_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 140, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/clear.png"))); // NOI18N
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 60, 50));
+        jPanel1.add(jtexto_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 210, -1));
+        jPanel1.add(jtexto_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 210, -1));
+        jPanel1.add(jtexto_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 210, -1));
+        jPanel1.add(jtexto_ContactoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 290, -1));
+        jPanel1.add(jtexto_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 210, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void validacionDeCampos() {
 
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SNumero(jltexto_dni);
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SLetras(jtexto_Apellido);
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SLetras(jtexto_Nombre);
+        Menu_PRINCIPAL_VETERINARIA.vcampos.SNumero(jtexto_Telefono);
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jFondo_CLIENTE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -253,13 +235,13 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlNOMBRE;
     private javax.swing.JLabel jlN_DE_CLIENTE;
     private javax.swing.JLabel jlTELEFONO1;
-    private javax.swing.JLabel jltexto_Apellido2;
-    private javax.swing.JLabel jltexto_Contacto_Alternativo;
-    private javax.swing.JLabel jltexto_Direccion1;
-    private javax.swing.JLabel jltexto_Nombre;
-    private javax.swing.JLabel jltexto_Telefono1;
-    private javax.swing.JLabel jltexto_dni;
+    private javax.swing.JTextField jltexto_dni;
     private javax.swing.JLabel jltexto_n_cliente;
     private javax.swing.JRadioButton jrbACTIVO;
+    private javax.swing.JTextField jtexto_Apellido;
+    private javax.swing.JTextField jtexto_ContactoA;
+    private javax.swing.JTextField jtexto_Direccion;
+    private javax.swing.JTextField jtexto_Nombre;
+    private javax.swing.JTextField jtexto_Telefono;
     // End of variables declaration//GEN-END:variables
 }

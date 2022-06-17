@@ -41,10 +41,7 @@ public class Veterianaria_Test_Main_F {
             Eliminar esta linea para chequear busqueda de tratamientos Activo e inactivos -A*/
             
             
-            
-            
-            
-            td.buscarTratamientoInactivo(50);
+            cd.buscarClientexDNI(9530545);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Veterianaria_Test_Main_F.class.getName()).log(Level.SEVERE, null, ex);
         }

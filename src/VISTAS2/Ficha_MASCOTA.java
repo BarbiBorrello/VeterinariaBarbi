@@ -1,19 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package VISTAS2;
 
-/**
- *
- * @author Barbara
- */
+import MODELO.Cliente;
+import MODELO.Mascota;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Ficha_CLIENTE2
-     */
     public Ficha_MASCOTA() {
         initComponents();
     }
@@ -29,7 +23,17 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel() {
+            String str="/IMAGENES/fondo_MASCOTA.png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(str));
+            Image image = icon.getImage();
+
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
+            }
+
+        };
         jSeparator1 = new javax.swing.JSeparator();
         jlALIAS = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -71,7 +75,17 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jFondo_CLIENTE = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel(){
+            String str="/IMAGENES/fondo _menu.png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(str));
+            Image image = icon.getImage();
+
+            public void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0,getWidth(),getHeight(), this);
+            }
+
+        };
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -252,7 +266,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jltexto_Telefono2.setOpaque(true);
         jPanel1.add(jltexto_Telefono2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 30, 20));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("D:\\PROYECTO FINAL\\IMAGENES\\Mascotas\\descarga.jpg")); // NOI18N
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 220, 110));
 
@@ -276,9 +289,8 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         });
         jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 100, 20));
 
-        jFondo_CLIENTE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_MASCOTA.png"))); // NOI18N
-        jFondo_CLIENTE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(jFondo_CLIENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 460));
+        jLabel9.setText("jLabel9");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 80, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -300,9 +312,24 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
+    private Mascota crearUnaMascotaDesdeElForm() {
+        Mascota mascota = new Mascota();
+        //String alias, String sexo, String especie, String raza, String color_pelaje, LocalDate fecha_nac, double peso_actual, double peso_promedio, boolean activo, Cliente cliente
+        mascota.setAlias(jltexto_alias1.getText());
+        mascota.setSexo(jltexto_Apellido4.getText());
+        mascota.setEspecie(jltexto_Apellido3.getText());
+        mascota.setRaza(jltexto_Nombre.getText());
+        mascota.setColor_pelaje(jltexto_Apellido2.getText());
+        //mascota.setFecha_nac(jltexto_Direccion1.getText());
+        mascota.setPeso_actual(Double.parseDouble(jltexto_Contacto_Alternativo.getText()));
+        mascota.setPeso_promedio(Double.parseDouble(jltexto_Telefono2.getText()));        
+        mascota.setActivo(true);        
+        //mascota.setCliente((Cliente) new Cliente());
+        
+        return mascota;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jFondo_CLIENTE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -311,6 +338,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
