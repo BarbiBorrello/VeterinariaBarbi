@@ -71,10 +71,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jltexto_Telefono2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jSeparator5 = new javax.swing.JSeparator();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,7 +135,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jltexto_Direccion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jltexto_Direccion1.setOpaque(true);
         jPanel1.add(jltexto_Direccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 60, 20));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 590, 10));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 590, 10));
 
         jltexto_Telefono1.setBackground(new java.awt.Color(255, 255, 255));
         jltexto_Telefono1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -149,7 +145,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setText("Ultima visita :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -164,7 +160,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 590, 40));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 590, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -261,22 +257,7 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("Fallecido");
         jRadioButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 80, 20));
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 308, 620, -1));
-
-        jRadioButton2.setText("Vacunado");
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 80, 20));
-
-        jRadioButton3.setText("Castrado");
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 90, 20));
-
-        jRadioButton4.setText("Desparacitado");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 100, 20));
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 80, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,10 +274,6 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private Mascota crearUnaMascotaDesdeElForm() {
         Mascota mascota = new Mascota();
@@ -326,16 +303,12 @@ public class Ficha_MASCOTA extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JLabel jlALIAS;

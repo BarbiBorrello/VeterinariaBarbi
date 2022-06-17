@@ -39,6 +39,9 @@ public class VisitaData {
 
     public VisitaData(Conexion conexion) {
         this.conexion = conexion;
+        // se inicializa las datas para que puedan conectarse con BD //
+        md = new MascotaData(conexion);
+        td = new TratamientoData(conexion);
         try {
             con = conexion.getConexion();
         } catch (SQLException ex) {
@@ -259,8 +262,7 @@ public class VisitaData {
                     visita.setFecha_visita(rs.getDate("fecha_visita").toLocalDate());
                     visita.setPeso(rs.getDouble("peso"));
                     visita.setActivo(rs.getBoolean("activo"));
-                    //visita.setMascota((Mascota)md.buscarMascota(rs.getInt("id_mascota")));
-                    visita.setMascota(p_mascota);
+                    visita.setMascota(md.buscarMascota(rs.getInt("id_mascota")));
                     visita.setTratamiento(td.buscarTratamientoActivo(rs.getInt("id_tratamiento")));
                     
                     visitas.add(visita);

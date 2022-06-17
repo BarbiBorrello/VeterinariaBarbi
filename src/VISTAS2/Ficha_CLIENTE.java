@@ -146,7 +146,7 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setText("MASCOTAS A SU CARGO :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -161,7 +161,7 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 350, 70));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 350, 70));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -185,7 +185,7 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 610, -1));
 
         jLabel8.setText("Agregar Mascota");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 30));
 
         jltexto_dni.setText("jTextField1");
         jPanel1.add(jltexto_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 140, -1));

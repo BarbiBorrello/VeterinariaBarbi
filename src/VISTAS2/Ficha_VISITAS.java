@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -92,6 +93,9 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jtfSintomas = new javax.swing.JTextField();
         jtID_VISITA = new javax.swing.JTextField();
         jlGUARDAR_VISITA = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableVisitas = new javax.swing.JTable();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -159,15 +163,18 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
         jrbACTIVO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jrbACTIVO, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 70, 20));
 
+        jlLISTAR_Visita.setBackground(new java.awt.Color(51, 51, 255));
         jlLISTAR_Visita.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jlLISTAR_Visita.setForeground(new java.awt.Color(51, 0, 204));
+        jlLISTAR_Visita.setForeground(new java.awt.Color(255, 255, 255));
         jlLISTAR_Visita.setText(" LISTAR VISITAS");
+        jlLISTAR_Visita.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jlLISTAR_Visita.setOpaque(true);
         jlLISTAR_Visita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jlLISTAR_VisitaMouseClicked(evt);
             }
         });
-        jPanel1.add(jlLISTAR_Visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 190, -1));
+        jPanel1.add(jlLISTAR_Visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 160, -1));
 
         jlSALIR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
         jlSALIR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -265,18 +272,50 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jlGUARDAR_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 50, 50));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 580, 10));
+
+        jTableVisitas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Visita N°  ", "Tratamiento", "Fecha ", "Peso", "Descripcion ", "Precios"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Double.class, java.lang.String.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTableVisitas);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 440, 90));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -426,6 +465,27 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
     private void jlLISTAR_VisitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlLISTAR_VisitaMouseClicked
         // TODO add your handling code here:
         
+          
+        // lista llena de los items del combobos Mascota//
+        List <Visita> listarVisitas = Menu_PRINCIPAL_VETERINARIA.vd.buscarVisitaxFecha((Mascota)jcMascotaV.getSelectedItem());
+            
+        
+    // TABLA // ----------------------------------------------------------------------------------------------      
+        DefaultTableModel model = (DefaultTableModel) jTableVisitas.getModel();
+        model.setRowCount(0); // BORRA TODAS LAS LINEAS Y VUELVE A 0//
+
+        for (Visita v1 : listarVisitas) {
+            
+            model.addRow(new Object[]{v1.getIdvisita(), v1.getTratamiento().getTipo_tratamiento(),v1.getFecha_visita(),v1.getPeso(),v1.getTratamiento().getDescripcion(),v1.getTratamiento().getPrecio()});
+        }
+		    
+        
+        
+        
+        
+        
+        
+        
         
         
     }//GEN-LAST:event_jlLISTAR_VisitaMouseClicked
@@ -440,9 +500,9 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
 
     }
 
-// metodo: trae todos los tratmientos activos //
+// metodo: trae todos los tratamientos activos //
     public void Tratamientos_Visita() {
-
+        
         List<Tratamiento> t = Menu_PRINCIPAL_VETERINARIA.td.obtenerTratamientos();
 
         for (Tratamiento t1 : t) {
@@ -450,6 +510,7 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
             jcbTratamientos_V.addItem(t1);
 
         }
+
     }
 
     // metodo: fecha de la visita: HOY //
@@ -465,12 +526,15 @@ public class Ficha_VISITAS extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLIMPIAR;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableVisitas;
     private javax.swing.JLabel jbuscarClienteV;
     private javax.swing.JComboBox<Mascota> jcMascotaV;
     private javax.swing.JComboBox<Tratamiento> jcbTratamientos_V;
