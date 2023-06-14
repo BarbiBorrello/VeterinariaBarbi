@@ -58,18 +58,18 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jlTELEFONO1 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jrbACTIVO = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLMascotasASuCargo = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLSalir = new javax.swing.JLabel();
+        jLAgregarCliente = new javax.swing.JLabel();
+        jLBorrarCliente = new javax.swing.JLabel();
+        jLModificarCliente = new javax.swing.JLabel();
+        jLBuscarCliente = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel8 = new javax.swing.JLabel();
+        jLAgregarMascota = new javax.swing.JLabel();
         jltexto_dni = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        jLLimpiar = new javax.swing.JLabel();
         jtexto_Apellido = new javax.swing.JTextField();
         jtexto_Nombre = new javax.swing.JTextField();
         jtexto_Direccion = new javax.swing.JTextField();
@@ -143,10 +143,10 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
         jrbACTIVO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jrbACTIVO, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 70, 20));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
-        jLabel1.setText("MASCOTAS A SU CARGO :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+        jLMascotasASuCargo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLMascotasASuCargo.setForeground(new java.awt.Color(51, 0, 204));
+        jLMascotasASuCargo.setText("MASCOTAS A SU CARGO :");
+        jPanel1.add(jLMascotasASuCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -163,36 +163,34 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 350, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 60, 50));
+        jLSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/close.png"))); // NOI18N
+        jLSalir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 60, 50));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/add.png"))); // NOI18N
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 60, 50));
+        jLAgregarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/add.png"))); // NOI18N
+        jLAgregarCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 60, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/delete.png"))); // NOI18N
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 60, 50));
+        jLBorrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/delete.png"))); // NOI18N
+        jLBorrarCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLBorrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 60, 50));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/edit.png"))); // NOI18N
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 60, 50));
+        jLModificarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/edit.png"))); // NOI18N
+        jLModificarCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLModificarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 60, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search.png"))); // NOI18N
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 60, 50));
+        jLBuscarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search.png"))); // NOI18N
+        jLBuscarCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 60, 50));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 610, -1));
 
-        jLabel8.setText("Agregar Mascota");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 30));
-
-        jltexto_dni.setText("jTextField1");
+        jLAgregarMascota.setText("Agregar Mascota");
+        jPanel1.add(jLAgregarMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 30));
         jPanel1.add(jltexto_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 140, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/clear.png"))); // NOI18N
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 60, 50));
+        jLLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/clear.png"))); // NOI18N
+        jLLimpiar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 60, 50));
         jPanel1.add(jtexto_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 210, -1));
         jPanel1.add(jtexto_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 210, -1));
         jPanel1.add(jtexto_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 210, -1));
@@ -224,14 +222,14 @@ public class Ficha_CLIENTE extends javax.swing.JInternalFrame {
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLAgregarCliente;
+    private javax.swing.JLabel jLAgregarMascota;
+    private javax.swing.JLabel jLBorrarCliente;
+    private javax.swing.JLabel jLBuscarCliente;
+    private javax.swing.JLabel jLLimpiar;
+    private javax.swing.JLabel jLMascotasASuCargo;
+    private javax.swing.JLabel jLModificarCliente;
+    private javax.swing.JLabel jLSalir;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
